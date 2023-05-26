@@ -1,7 +1,12 @@
-import React from 'react';
+import Inputs from "@components/inputs";
 
 const Home = () => {
-  return <div>Home</div>;
+  return (
+    <>
+      <div>Different types of Inputs</div>
+      <Inputs />
+    </>
+  );
 };
 
 export default Home;

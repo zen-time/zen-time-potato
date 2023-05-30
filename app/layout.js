@@ -1,4 +1,4 @@
-import '@styles/global';
+import '../styles/globals.css';
 
 export const metadata = {
   title: 'Zen Time Potato',

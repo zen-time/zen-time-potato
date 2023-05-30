@@ -24,19 +24,26 @@ const Inputs = () => {
         </div>
 
         <hr />
-        <div>
+
+        <div className="w-1/4  outline outline-zinc-200 rounded-full">
           <input
             type="radio"
-            className=" border-slate-300 outline-none  cursor-pointer hover:outline-blue-400"
+            className=" cursor-pointer hover:outline-blue-400 w-7 peer/draft"
           />
-          <input
-            type="radio"
-            className=" border-slate-300 outline-none w-12 cursor-pointer rounded-full"
-          />
+          <label className="peer-checked/draft:text-sky-500">Check</label>
         </div>
 
+        <div className=" w-1/4 pl-2 outline outline-zinc-200  hover:outline-blue-400 shadow-xl ">
+          <input type="radio" className=" cursor-pointer " />
+          <label className="text-md pl-1 ">Click</label>
+        </div>
+
+        <div className=" w-12 hover:w-14 relative rounded-xl  bg-gray-400 ">
+          <input type="radio" className=" cursor-pointer absolute mt-1 ml-1" />
+          <label className="px-5 ">OK</label>
+        </div>
         <hr />
-        <input type="month" className="border border-slate-300" />
+        <input type="month" className="border w-1/2 border-slate-300" />
       </div>
     </div>
   );

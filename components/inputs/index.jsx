@@ -1,5 +1,7 @@
-const Inputs = () => {
-  return <div>Inputs</div>;
+import React from "react";
+
+const index = () => {
+  return <div>index</div>;
 };
 
-export default Inputs;
+export default index;

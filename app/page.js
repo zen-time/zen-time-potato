@@ -1,7 +1,7 @@
-import React from 'react';
+import Button from "@components/buttons/buttons";
 
 const Home = () => {
-  return <div>Home</div>;
+  return <div><Button/></div>;
 };
 
 export default Home;

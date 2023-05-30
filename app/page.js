@@ -1,7 +1,11 @@
-import React from 'react';
+import Inputs from "@components/inputs";
 
 const Home = () => {
-  return <div>Home</div>;
+  return (
+    <>
+      <Inputs />
+    </>
+  );
 };
 
 export default Home;

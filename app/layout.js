@@ -1,4 +1,5 @@
-import "@styles/global.css";
+
+import "@styles/globals.css";
 
 export const metadata = {
   title: "Zen Time Potato",
@@ -8,7 +9,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className="w-screen h-screen">{children}</body>
+      <body>{children}
+      </body>
     </html>
   );
 }

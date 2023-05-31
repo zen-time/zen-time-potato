@@ -1,20 +1,38 @@
-// import { ToastContainer } from "react-toastify"
-// import 'react-toastify/dist/ReactToastify.css'
+import React from "react";
+import { toast } from "react-toastify";
 
-
-// const Toast = () => {
-//   return (
-//     <ToastContainer 
-//     position="top-right"
-//     autoClose={3000}
-//     hideProgressBar
-//     newestOnTop={false}
-//     closeOnClick
-//     pauseOnFocusLoss
-//     draggable
-//     pauseOnHover
-//     />
-//   )
-// }
-
-// export default Toast
+const Toast = (message, type) => {
+    switch (type) {
+      case "success":
+        return toast.success(
+          <div>
+            <p>{message}</p>
+          </div>
+        );
+      case "error":
+        return toast.error(
+          <div>
+            <p>{message}</p>
+          </div>
+        );
+      case "warning":
+        return toast.warning(
+          <div>
+            <p>{message}</p>
+          </div>
+        );
+      case "info":
+        return toast.info(
+            <div>
+                <p>{message}</p>
+            </div>
+        );
+      default:
+        return toast(
+          <div>
+            <p>{message}</p>
+          </div>
+        );
+    }
+  };
+  export default Toast;

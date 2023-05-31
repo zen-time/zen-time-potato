@@ -1,25 +1,30 @@
 'use client'
 import React from 'react'
-import { toast, ToastContainer } from 'react-toastify'
+import { ToastContainer, toast} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+import Toast from './ToastContainer'
 
 
 const Alerts = () => {
 
     const handleLogin = () =>{
-        toast.success('Login Suceess')
+        Toast('login Success','success')
     }
     const handleLogout = () =>{
-        toast('Logout Suceess')
+      Toast('login Success')
+        
     }
     const handleError = () =>{
-        toast.error('Login Error')
+      Toast('error message','error')
+        
     }
     const handleWarning = () =>{
-        toast.warning('Login Warning')
+      Toast('Warning message','warning')
+        
     }
     const handleInfo = () =>{
-        toast.info('Login Suceess')
+      Toast('Info Message','info')
+        
     }
   return (
     <div className='flex flex-col items-center justify-center gap-6'>

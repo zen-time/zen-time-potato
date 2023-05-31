@@ -1,7 +1,8 @@
 const Inputs = () => {
   return (
-    <div className="flex flex-col gap-2 items-center justify-center h-screen ">
-      <div className=" flex items-center  mt-[1rem] w-screen px-[30rem]">
+    <main className="grid grid-cols-2 gap-[3rem]  px-[5rem] bg-slate-500 h-screen">
+      {/* 1 */}
+      <div className="flex items-center justify-center ">
         <form>
           <label
             for="search"
@@ -17,14 +18,8 @@ const Inputs = () => {
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
               >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                ></path>
+                <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
               </svg>
             </div>
             <input
@@ -43,19 +38,26 @@ const Inputs = () => {
           </div>
         </form>
       </div>
-      <div className="grid grid-cols-2 mt-[20px] gap-5 px-[5rem]">
+      {/* 2 */}
+      <div className="flex items-center justify-center">
         <input
           type="text"
           class="bg-yellow-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-[30rem] p-2.5 dark:bg-yellow-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
           placeholder="Enter your Name"
           required
         />
+      </div>
+      {/* 3 */}
+      <div className="flex items-center justify-center">
         <input
           type="text"
           className="bg-red-50 border border-yellow-500 text-yellow-900 placeholder-yellow-700 text-sm rounded-lg focus:ring-yellow-500 dark:bg-yellow-100 focus:border-yellow-500 block w-[30rem] p-2.5 dark:text-black dark:placeholder-gray-500 dark:border-yellow-500  "
           placeholder="Enter your name"
           required
         />
+      </div>
+      {/* 4 */}
+      <div className="flex  items-center mr-[0rem] p-[3rem]">
         <input
           type="text"
           className="bg-green-50 border border-green-500 text-green-900 dark:text-green-400 placeholder-green-700 dark:placeholder-green-500 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-[30rem] p-2.5 dark:bg-gray-700 dark:border-green-500"
@@ -67,7 +69,8 @@ const Inputs = () => {
           placeholder="Error input"
         />
       </div>
-      <div className="mt-[2rem] flex  gap-3 px-[30rem]">
+      {/* 5 */}
+      <div>
         <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
         <label for="vehicle1"> FrontEnd</label>
         <br></br>
@@ -78,12 +81,13 @@ const Inputs = () => {
         <label for="vehicle3"> FullStack</label>
         <br></br>
       </div>
-
-      <div className="mt-[2rem] flex  gap-3 px-[30rem]">
+      {/* 6 */}
+      <div>
         <label for="birthday">Birthday:</label>
         <input type="date" id="birthday" name="birthday" />
       </div>
-      <div className="grid mt-[5rem] w-[20rem] justify-center gap-3">
+      {/* 7 */}
+      <div>
         <input
           className="appearance-none border border-gray-300 rounded-md py-2 px-4 leading-tight focus:outline-none focus:border-blue-500"
           type="text"
@@ -95,47 +99,49 @@ const Inputs = () => {
           placeholder="xxxxx "
         />
         <input
-          className=" w-[10rem] appearance-none border border-gray-300 rounded-md py-2 px-4 leading-tight focus:outline-none focus:border-blue-500 bg-blue-500"
+          className=" w-[10rem] appearance-none border border-gray-300 rounded-md py-2 px-4 leading-tight focus:outline-none focus:border-blue-700 hover:border-blue-700 bg-blue-500 hover:bg-blue-700"
           type="submit"
         />
       </div>
-      <div className="grid mt-[5rem] w-[20rem] justify-center gap-3">
+      {/* 8 */}
+      <div>
         <input
-          className="appearance-none bg-black border border-gray-300 rounded-md py-2 px-4 leading-tight focus:outline-none focus:border-blue-500"
+          className="appearance-none bg-black border text-white border-gray-300 rounded-md py-2 px-4 leading-tight focus:outline-none focus:border-black"
           type="text"
           placeholder="User i'd"
         />
         <input
-          className="appearance-none bg-black border border-gray-300 rounded-md py-2 px-4 leading-tight focus:outline-none focus:border-blue-500"
+          className="appearance-none bg-black border text-white border-gray-300 rounded-md py-2 px-4 leading-tight focus:outline-none focus:border-black"
           type="password"
           placeholder="xxxxx "
         />
         <input
-          className=" w-[10rem] appearance-none border border-gray-300 rounded-md py-2 px-4 leading-tight focus:outline-none focus:border-blue-500 bg-blue-500"
+          className=" w-[10rem] appearance-none border border-gray-300 rounded-md py-2 px-4 leading-tight focus:outline-none focus:border-blue-700 hover:border-blue-700 bg-blue-500 hover:bg-blue-700 "
           type="submit"
         />
-
+      </div>
+      {/* 9 */}
+      <div>
         <input
-          className="flex jsutify-between  focus:bg-[#e9f1f5]  focus:outline-dotted  placeholder:text-sm text-bold placeholder:text-[#455A64] text-center rounded-sm "
+          className=" focus:bg-[#e9f1f5]  focus:outline-dotted   placeholder:text-sm text-center rounded-lg appearance-none border border-gray-300  py-2 px-4 leading-tight focus:outline-none focus:border-blue-500"
           type="text"
           placeholder="user_name"
           required
         />
 
         <input
-          className="flex  justify focus:bg-[#e9f1f5]  focus:outline-dotted  placeholder:text-sm text-bold placeholder:text-[#455A64] text-center rounded-sm "
+          className="focus:bg-[#e9f1f5]  focus:outline-dotted   placeholder:text-sm text-center rounded-lg appearance-none border border-gray-300  py-2 px-4 leading-tight focus:outline-none focus:border-blue-500"
           type="password"
           placeholder="password"
           required
         />
 
         <input
-          className="p-[1px] bg-[#64B5F6]  focus:border-blue-500 rounded-sm hover:bg-[#00BCD4] hover:cursor-pointer px-5 ml-[5.5rem]"
+          className=" w-[10rem] appearance-none border border-gray-300 rounded-md py-2 px-4 leading-tight focus:outline-none focus:border-blue-700 hover:border-blue-700 bg-blue-500 hover:bg-blue-700 hover:cursor-pointer"
           type="submit"
         />
       </div>
-    </div>
-
+    </main>
     // workouts
   );
 };

@@ -23,7 +23,7 @@ const IndexOne = ()=>{
   // const numbers =[...Array(npage + 1).keys()].slice(1)
 
   return (
-    <div className="w-screen h-screen flex justify-center items-center flex-col">
+    <div className="w-full h-screen flex justify-center items-center flex-col">
        <div>
         <h1 className="text-4xl font-bold p-4 text-red-600">STREAMS SOFTWARE SOLUTIONS</h1>
       </div>

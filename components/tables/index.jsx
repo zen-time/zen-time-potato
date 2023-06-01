@@ -28,7 +28,7 @@ const Index = ()=>{
 
   return (
     <>
-      <div className="w-screen h-screen flex justify-center items-center flex-col">
+      <div className="w-full h-screen flex justify-center items-center flex-col">
         <div>
           <h1 className="text-4xl font-bold p-4">
             <span className="text-red-500">STREAMS</span> EMPLOYEE DETAILS

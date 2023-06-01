@@ -29,7 +29,7 @@ const EmployeeDetails = ()=>{
         }, 
     ]
     return(
-        <div className="w-screen h-screen flex justify-center items-center ">
+        <div className="w-full h-screen flex justify-center items-center ">
             
             <div className="bg-white rounded-md p-5 border-green-600">
             <div >

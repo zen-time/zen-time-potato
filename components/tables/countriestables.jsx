@@ -36,12 +36,12 @@ const Countriestables = () => {
             }).map((item) => {
               return (
                 <tr className="text-center">
-                  <td className="p-5 border-2   ">{item.name}</td>
-                  <td className="p-5 border-2 ">
+                  <td className="p-5 border-2 text-xl">{item.name}</td>
+                  <td className="p-5 border-2 text-xl">
                     {item.nativeName}
                   </td>
-                  <td className="p-5 border-2 ">{item.capital}</td>
-                  <td className="p-5 border-2 ">
+                  <td className="p-5 border-2 text-xl">{item.capital}</td>
+                  <td className="p-5 border-2 text-xl ">
                     <Image
                       src={item.flags.svg}
                       width={50}

@@ -1,18 +1,21 @@
 'use client'
 import React, { useState } from 'react'
-import Country from './data';
+import Country from './countrydata';
 import Image from 'next/image';
 
 const Countriestables = () => {
 
-  const [search,setSearch] = useState('')
+  const [search,setSearch] = useState('');
 
   return (
     <>
-      <div className="flex justify-center items-center p-3">
+    <div>
+      <h1 className='text-4xl'>Country List</h1>
+    </div>
+      <div className="flex justify-center p-3">
         <input
           type="text"
-          placeholder="Search..."
+          placeholder="Search here..."
           className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-[30%] p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
@@ -36,12 +39,12 @@ const Countriestables = () => {
             }).map((item) => {
               return (
                 <tr className="text-center">
-                  <td className="p-5 border-2 text-xl">{item.name}</td>
-                  <td className="p-5 border-2 text-xl">
+                  <td className="p-5 border-2 text-lg">{item.name}</td>
+                  <td className="p-5 border-2 text-lg">
                     {item.nativeName}
                   </td>
-                  <td className="p-5 border-2 text-xl">{item.capital}</td>
-                  <td className="p-5 border-2 text-xl ">
+                  <td className="p-5 border-2 text-lg">{item.capital}</td>
+                  <td className="p-5 border-2 text-lg ">
                     <Image
                       src={item.flags.svg}
                       width={50}

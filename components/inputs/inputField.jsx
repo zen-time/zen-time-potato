@@ -33,7 +33,13 @@ const InputField = () => {
             className=" p-2 w-80 pl-4   cursor-pointer hover:ring-2 ring-blue-500/50 outline-none rounded-sm shadow-lg "
           />
         </div>
-
+        <div className="my-2">
+          <input
+            type="password"
+            placeholder="Password"
+            className=" p-2 w-60 border-b-2 bg-gray-100 outline-none border-gray-500 "
+          />
+        </div>
         <hr />
         {/* first */}
         <div className="w-1/4 m-2 outline outline-zinc-200 rounded-full">

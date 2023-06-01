@@ -12,7 +12,7 @@ const Home = () => {
   return (
     <>
     <Navbar />
-    <Countriestables Country={Country} />
+    <Countriestables  />
     <Index  />
     <EmployeeDetails />
     <IndexOne />

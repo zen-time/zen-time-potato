@@ -1,5 +1,4 @@
-const  Country = // 20230531144818
-// https://restcountries.com/v2/all
+const  Country = 
 
 [
   {

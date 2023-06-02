@@ -1,43 +1,48 @@
+import { Container } from "postcss";
+
 const Inputs = () => {
   return (
-    <main className="grid grid-cols-2 gap-[3rem]  px-[5rem] bg-slate-500 h-screen">
+    <main className="flex items-center  h-screen">
       {/* 1 */}
-      <div className="flex items-center justify-center ">
-        <form>
-          <label
-            for="search"
-            className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
-          >
-            Search
-          </label>
-          <div className="relative">
-            <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-              <svg
-                aria-hidden="true"
-                className="w-5 h-5 text-gray-500 dark:text-gray-400"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-              </svg>
-            </div>
-            <input
-              type="search"
-              id="search"
-              className="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-              placeholder="Search"
-              required
-            />
-            <button
-              type="submit"
-              className="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+      <div className="w-[50rem] h-[50rem]">
+        <div className="flex items-center justify-center ">
+          <form>
+            <label
+              for="search"
+              className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
             >
               Search
-            </button>
-          </div>
-        </form>
+            </label>
+            <div className="relative">
+              <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                <svg
+                  aria-hidden="true"
+                  className="w-5 h-5 text-gray-500 dark:text-gray-400"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                </svg>
+              </div>
+              <input
+                type="search"
+                id="search"
+                className="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="Search"
+                required
+              />
+              <button
+                type="submit"
+                className="text-white absolute right-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+              >
+                Search
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
+
       {/* 2 */}
       <div className="flex items-center justify-center">
         <input
@@ -57,7 +62,7 @@ const Inputs = () => {
         />
       </div>
       {/* 4 */}
-      <div className="flex  items-center mr-[0rem] p-[3rem]">
+      <div className=" mr-[0rem] p-[3rem]">
         <input
           type="text"
           className="bg-green-50 border border-green-500 text-green-900 dark:text-green-400 placeholder-green-700 dark:placeholder-green-500 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-[30rem] p-2.5 dark:bg-gray-700 dark:border-green-500"
@@ -83,16 +88,19 @@ const Inputs = () => {
       </div>
       {/* 6 */}
       <div>
-        <label for="birthday">Birthday:</label>
-        <input type="date" id="birthday" name="birthday" />
+        <input
+          type="date"
+          class="border rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
       </div>
       {/* 7 */}
-      <div>
+      <div className="flex-col ">
         <input
           className="appearance-none border border-gray-300 rounded-md py-2 px-4 leading-tight focus:outline-none focus:border-blue-500"
           type="text"
           placeholder="Enter your Name "
         />
+        <br />
         <input
           className="appearance-none border border-gray-300 rounded-md py-2 px-4 leading-tight focus:outline-none focus:border-blue-500"
           type="password"

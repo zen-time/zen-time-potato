@@ -1,7 +1,12 @@
+import SideNavbar from '@components/navigation';
 import React from 'react';
 
 const Home = () => {
-  return <div>Home</div>;
+  return(
+    <>
+    <SideNavbar/>
+    </>
+  );
 };
 
 export default Home;

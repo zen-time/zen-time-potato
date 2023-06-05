@@ -15,3 +15,66 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
+
+.input_fill {
+  @apply p-2  pl-4 rounded-lg bg-white cursor-pointer border-solid outline-white;
+}
+
+.input_outline {
+  @apply p-2 w-3/4 bg-transparent border-2 border-gray-200 outline-gray-300 cursor-pointer;
+}
+.input_outline_label {
+  @apply my-1 text-slate-400;
+}
+.input_shadow {
+  @apply p-2 w-60 pl-4 rounded-full  cursor-pointer shadow-inner  shadow-zinc-300 outline-none;
+}
+.input_hover {
+  @apply p-2 w-80 pl-4   cursor-pointer hover:ring-2 ring-blue-500/50 outline-none rounded-sm shadow-lg;
+}
+.input_borderBottom {
+  @apply p-2 w-60 border-b-2 bg-gray-100 outline-none border-gray-500;
+}
+.input_shadow_section {
+  @apply w-1/4 m-2 outline outline-zinc-200 rounded-full;
+}
+/* radio input fields */
+.input_radio {
+  @layer peer/draft;
+  @apply cursor-pointer hover:outline-blue-400 w-7;
+}
+.input_radio_label {
+  @apply peer-checked/draft:text-sky-500;
+}
+/* second */
+.input_radio_container {
+  @apply w-1/4 pl-2 m-2 outline outline-zinc-200 transition-transform hover:-translate-x-1 hover:outline-blue-300 shadow-xl;
+}
+
+.input_radio_normal {
+  @apply cursor-pointer;
+}
+.input_radio_normal_label {
+  @layer text-md pl-1;
+}
+.input_radio_hover_section {
+  @apply w-14 m-2 transition ease-in-out delay-150 hover:w-14 relative rounded-xl  bg-gray-400 hover:-translate-y-1 hover:duration-300;
+}
+.input_radio_hover {
+  @apply cursor-pointer absolute mt-1 ml-1;
+}
+.input_radio_hover_label {
+  @apply px-5;
+}
+.input_radio_toggle_section {
+  @apply w-6/12 bg-slate-100 border-collapse border-spacing-3;
+}
+.input_radio_toggle_label_no {
+  @apply p-1 border border-slate-300 shadow-inner shadow-zinc-100;
+}
+.input_radio_toggle_label_yes {
+  @apply p-1 border border-slate-300 shadow-inner shadow-zinc-300;
+}
+.input_month {
+  @apply border w-1/2 border-slate-300;
+}

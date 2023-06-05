@@ -52,23 +52,23 @@ const Cards = () => {
     },
   ];
 
-  const data1 = [
-    {
-      img: "/assets/images/10.jpg",
-      title: "testimonials",
-      text: " Mnis magnam impedit hic totam repudiandae reiciendis voluptate inventore nisi quidem Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab eius molestias, quasi",
-    },
-    {
-      img: "/assets/images/10.jpg",
-      title: "testimonials",
-      text: " Mnis magnam impedit hic totam repudiandae reiciendis voluptate inventore nisi quidem Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab eius molestias, quasi",
-    },
-    {
-      img: "/assets/images/10.jpg",
-      title: "testimonials",
-      text: " Mnis magnam impedit hic totam repudiandae reiciendis voluptate inventore nisi quidem Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab eius molestias, quasi",
-    },
-  ];
+  // const data1 = [
+  //   {
+  //     img: "/assets/images/10.jpg",
+  //     title: "testimonials",
+  //     text: " Mnis magnam impedit hic totam repudiandae reiciendis voluptate inventore nisi quidem Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab eius molestias, quasi",
+  //   },
+  //   {
+  //     img: "/assets/images/10.jpg",
+  //     title: "testimonials",
+  //     text: " Mnis magnam impedit hic totam repudiandae reiciendis voluptate inventore nisi quidem Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab eius molestias, quasi",
+  //   },
+  //   {
+  //     img: "/assets/images/10.jpg",
+  //     title: "testimonials",
+  //     text: " Mnis magnam impedit hic totam repudiandae reiciendis voluptate inventore nisi quidem Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab eius molestias, quasi",
+  //   },
+  // ];
 
   return (
     <div className=" flex items-center justify-center ">
@@ -89,7 +89,7 @@ const Cards = () => {
           );
         })}
 
-        <div className=" grid lg:grid-cols-3 p-10 gap-60 w-max  drop-shadow-lg bg-black-100">
+        {/* <div className=" grid lg:grid-cols-3 p-10 gap-60 w-max  drop-shadow-lg bg-black-100">
           {data1.map((cards1) => {
             return (
               <div className="bg-indigo-950 flex flex-col justify-center w-[295px] p-6 items-center rounded-lg">
@@ -112,7 +112,7 @@ const Cards = () => {
               </div>
             );
           })}
-        </div>
+        </div> */}
       </div>
     </div>
   );

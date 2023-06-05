@@ -4,7 +4,7 @@ import { FiSearch } from "react-icons/fi";
 import { IoMicOutline } from "react-icons/io5";
 import { RiFileCopy2Line } from "react-icons/ri";
 
-const Inputs = () => {
+const Input = () => {
   const [size, setsize] = useState();
   const [borderRadius, setBorderRadius] = useState();
   const [fontSize, setFontSize] = useState();
@@ -341,4 +341,4 @@ const Inputs = () => {
   );
 };
 
-export default Inputs;
+export default Input;

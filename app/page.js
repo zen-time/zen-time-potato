@@ -1,25 +1,15 @@
 // import Inputs from "@components/inputs";
+import Input from "@components/inputs/InputsType";
+import SearchDefault from "@components/inputs/search-default/SearchDefault";
 
-import ReusableInputComponent from "@components/inputs/reusableinputcomponent";
+import SearchNormal from "@components/inputs/search-normal/SearchNormal";
 
 const Home = () => {
   return (
     <>
-      {/* <Inputs /> */}
-      <ReusableInputComponent
-        type="range"
-        min="0"
-        max="1000"
-        step="50"
-        list="marker"
-        label="range input"
-        id="range"
-      />
-      <ReusableInputComponent
-        type="search"
-        placeholder="search..."
-        id="search"
-      />
+      <Input />
+      <SearchNormal />
+      <SearchDefault />
     </>
   );
 };

@@ -1,12 +1,11 @@
-import Inputs from "./Inputs";
-import ReusableComponents from "./reusableComponents";
-const index = () => {
+import { InputSuccess } from "./inputpro";
+// import "@styles/globals.css";
+const Index = ({ style, type, placeholder }) => {
   return (
     <div>
-      <Inputs />
-      <ReusableComponents />
+      <InputSuccess style={style} type={type} placeholder={placeholder} />
     </div>
   );
 };
 
-export default index;
+export default Index;

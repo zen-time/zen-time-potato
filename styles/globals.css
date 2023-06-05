@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+.input_pro_success {
+  @apply appearance-none border border-gray-300 rounded-md py-2 px-4 leading-tight focus:outline-none focus:border-green-500;
+}
+
+.input_pro_warning {
+  @apply appearance-none border border-gray-300 rounded-md py-2 px-4 leading-tight focus:outline-none focus:border-red-500;
+}
+
+/* .input_pro_div {
+  @apply flex items-center justify-center h-screen;
+} */
+
+/* .submit_pro {
+  @apply w-[10rem] appearance-none border border-gray-300 rounded-md py-2 px-4 leading-tight focus:outline-none focus:border-blue-700 hover:border-blue-700 bg-blue-500 hover:bg-blue-700;
+} */

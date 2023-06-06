@@ -1,9 +1,9 @@
-import { InputSuccess } from "./inputpro";
+import { InputPro } from "./inputpro";
 // import "@styles/globals.css";
 const Index = ({ style, type, placeholder }) => {
   return (
     <div>
-      <InputSuccess style={style} type={type} placeholder={placeholder} />
+      <InputPro style={style} type={type} placeholder={placeholder} />
     </div>
   );
 };

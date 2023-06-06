@@ -21,7 +21,7 @@ const Selectedtable = () => {
       <thead className='text-xl text-center  rounded-xl text-gray-700 uppercase bg-gray-100 dark:bg-gray-700 dark:text-gray-400'>
             <tr>
               <th>
-                <input type="checkbox" checked />
+                <input type="checkbox" defaultChecked />
               </th>
                 <th className='p-3 text-center'>#</th>
                 <th>First Name</th>

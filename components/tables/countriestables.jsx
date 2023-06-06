@@ -36,9 +36,9 @@ const Countriestables = () => {
               return search.toLowerCase() === ""
                 ? item
                 : item.name.toLowerCase().includes(search);
-            }).map((item) => {
+            }).map((item, index) => {
               return (
-                <tr className="text-center">
+                <tr className="text-center" key={index}>
                   <td className="p-5 border-2 text-lg">{item.name}</td>
                   <td className="p-5 border-2 text-lg">
                     {item.nativeName}
@@ -47,9 +47,10 @@ const Countriestables = () => {
                   <td className="p-5 border-2 text-lg ">
                     <Image
                       src={item.flags.svg}
-                      width={50}
-                      height={50}
                       alt="flags.svg"
+                      width={0}
+                      height={0}
+                      style={{width:'50px', height:'auto'}}
                     />
                   </td>
                 </tr>

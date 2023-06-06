@@ -19,6 +19,9 @@ const Home = () => {
     setShowToast(false);
     setShowImg(false);
   };
+  const handleTimeoutImg = () =>{
+    setShowImg(false)
+  }
   const handleToast = () => {
     Toast("Hello This is Success", 'success');
   };
@@ -49,7 +52,7 @@ const Home = () => {
         description="This is a Toast Message"
         duration={3000}
         position="bottom-right"
-        onClose={handleTimeout}
+        onClose={handleTimeoutImg}
       />
     </>
   );

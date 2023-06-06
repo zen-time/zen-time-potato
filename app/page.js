@@ -81,6 +81,7 @@ const Home = () => {
         radius={"2xl"}
         textclr={"orange-600"}
       />
+      <SearchVoiceIcon />
     </>
   );
 };

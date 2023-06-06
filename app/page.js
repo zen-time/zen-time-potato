@@ -1,6 +1,8 @@
 'use client'
 import React, { useState } from 'react';
-import { BasicToast, DefaultToast } from '@components/alerts';
+import { ToastContainer} from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+import { BasicToast, DefaultToast, Toast } from '@components/alerts';
 
 const Home = () => {
   const [showToast, setShowToast] = useState(false);
@@ -12,6 +14,9 @@ const Home = () => {
   const handleTimeout = () => {
     setShowToast(false);
   };
+  const handleToast = () =>{
+    Toast('Hello This is Success','error')
+  }
 
   const defaultRender = () =>(
 
@@ -53,6 +58,10 @@ const Home = () => {
         <button onClick={handleClick}>showToast</button>
         {showToast && defaultRender()}
       </div>
+      <div>
+        <button onClick={handleToast}>Toastify</button>
+      </div>
+      <ToastContainer/>
     </div>
   );
 };

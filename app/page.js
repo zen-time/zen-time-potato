@@ -1,15 +1,14 @@
-import Login from "@components/authentication";
-import React from "react";
+import React from 'react';
+
+import Employeetables from '@components/tables';
+
 
 const Home = () => {
   return (
-    <div>
-      <Login
-        Signin="Sign In Account"
-        email="Email Address"
-        Password="Password"
-      />
-    </div>
+    <>
+    <Employeetables/>
+    </>
   );
 };
+
 export default Home;

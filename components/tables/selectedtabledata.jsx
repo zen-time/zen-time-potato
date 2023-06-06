@@ -1,10 +1,10 @@
 export const Company = [{
     "id": 1,
-    "first_name": "Cacilie",
-    "last_name": "Ferby",
-    "email": "cferby0@smugmug.com",
-    "Role": "Supervisor",
-    "Company Name": "Twimbo"
+    "first_name": "Nikila",
+    "last_name": "Rani",
+    "email": "NikilaRani@gmail.com",
+    "Role": "Director Human Resources & [CEO]",
+    "Company Name": "Streams"
   }, {
     "id": 2,
     "first_name": "Emmit",

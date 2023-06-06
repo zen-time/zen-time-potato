@@ -1,7 +1,9 @@
 
 import React from "react";
 import "@styles/globals.css";
+// import Buttondesignone from "@components/buttons/buttondesignone";
 import Buttondesignone from "@components/buttons/buttondesignone";
+
 
 const Home = () => {
 

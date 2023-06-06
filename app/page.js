@@ -1,9 +1,12 @@
-import Inputs from "@components/inputs";
+import React from 'react';
+
+import Employeetables from '@components/tables';
+
 
 const Home = () => {
   return (
     <>
-      <Inputs />
+    <Employeetables/>
     </>
   );
 };

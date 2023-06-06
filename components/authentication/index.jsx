@@ -2,12 +2,15 @@ import React from "react";
 
 const Login = (props) => {
   const { Signin, email, Password } = props;
+  // const { Signin, email, Password } = props; testing pull request
+
   return (
     <div className="flex justify-center items-center h-screen w-screen bg-[url('https://wallpaper.dog/large/11027692.jpg')] bg-center bg-no-repeat bg-cover">
       <div className="sm:mx-auto sm:w-full sm:max-w-sm  p-14 rounded-xl  backdrop-blur-xl bg-white/25 border-2 border-slate-300">
         <h2 className="mb-8 text-center text-2xl font-bold leading-9 tracking-tight text-gray-700">
           {Signin}
         </h2>
+
         <form className="space-y-6" action="#" method="POST">
           <div>
             <label

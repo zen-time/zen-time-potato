@@ -1,7 +1,7 @@
 'use client'
 import React, { useEffect, useState } from 'react';
 
-const DefaultToast = ({ message, duration, position, onClose, description}) => {
+const DefaultToast = ({ message, duration, position, onClose, description,theme,type}) => {
   const [show, setShow] = useState(true);
   const handleClose = ()=>{
     setShow(false)
@@ -37,13 +37,17 @@ const DefaultToast = ({ message, duration, position, onClose, description}) => {
   };
 
         return(
-            <div className={`fixed flex items-center justify-center gap-2 z-50 bg-slate-200 text-black p-4 rounded-md shadow-md ${getPositionStyles()}`}>
+            <div  className={`${
+              theme ? theme : "toastify-default"
+            } ${getPositionStyles()}`}>
             
             <div>
-                <div className="toast__content font-medium">{message}</div>
+                <div className={`${type}`}>{message}</div>
                 <div>{description}</div>
             </div>
-            <button onClick={handleClose} className='px-1  hover:bg-blue-300'>x</button>
+            <span className='text-black'>
+              <button onClick={handleClose} className={`toastify-close`}>x</button>
+            </span>
         </div>
         )
 };

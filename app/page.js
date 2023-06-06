@@ -1,50 +1,56 @@
-'use client'
-import React, { useState } from 'react';
-import { ToastContainer} from 'react-toastify'
-import 'react-toastify/dist/ReactToastify.css'
-import { BasicToast, DefaultToast, Toast } from '@components/alerts';
+"use client";
+import React, { useState } from "react";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { BasicToast, DefaultToast, Toast } from "@components/alerts";
 
 const Home = () => {
   const [showToast, setShowToast] = useState(false);
+  const [showImg, setShowImg] = useState(false);
 
   const handleClick = () => {
     setShowToast(true);
   };
+  const handleClickImage = () => {
+    setShowImg(true);
+  };
 
   const handleTimeout = () => {
     setShowToast(false);
+    setShowImg(false);
   };
-  const handleToast = () =>{
-    Toast('Hello This is Success','error')
-  }
+  const handleToast = () => {
+    Toast("Hello This is Success", 'success');
+  };
 
-  const defaultRender = () =>(
-
+  const defaultRender = () => (
     <>
       <DefaultToast
         message="Hello team!"
+        theme="toast-success"
+        type="toast__content"
         description="This is a Toast Message"
         duration={3000}
-        position="top-left"
+        position="bottom-left"
         onClose={handleTimeout}
       />
     </>
-  )
+  );
 
   const renderToast = () => (
     <>
       <BasicToast
-        type="image"
+        type="toast__content"
+        theme="toast-info"
         width={100}
         height={50}
         src="/assets/images/logo.png"
-        id={3}
         message="Hello team members!"
         description="This is a Toast Message"
         duration={3000}
-        position="top-right"
+        position="bottom-right"
         onClose={handleTimeout}
-      /> 
+      />
     </>
   );
 
@@ -55,13 +61,24 @@ const Home = () => {
         {showToast && renderToast()}
       </div>
       <div>
-        <button onClick={handleClick}>showToast</button>
-        {showToast && defaultRender()}
+        <button onClick={handleClickImage}>showToast</button>
+        {showImg && defaultRender()}
       </div>
       <div>
         <button onClick={handleToast}>Toastify</button>
       </div>
-      <ToastContainer/>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+      />
     </div>
   );
 };

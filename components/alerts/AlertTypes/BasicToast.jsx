@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 
-const BasicToast = ({ message, duration, position, onClose, description, src, type, width, height}) => {
+const BasicToast = ({ message, duration, position, onClose, description, src, type, width, height, theme}) => {
   const [show, setShow] = useState(true);
   const handleClose = ()=>{
     setShow(false)
@@ -37,16 +37,33 @@ const BasicToast = ({ message, duration, position, onClose, description, src, ty
     }
   };
 
-        return(
-            <div className={`fixed flex items-center justify-center gap-2 z-50 bg-slate-200 text-black p-4 rounded-md shadow-md ${getPositionStyles()}`}>
-            {src ?<Image src={src} alt={message} width={width?width:50} height={height?height:50}/>:null}
-            <div>
-                <div className="toast__content font-medium">{message}</div>
+        return (
+          <div
+            className={`${
+              theme ? theme : "toastify-default"
+            } ${getPositionStyles()}`}
+          >
+            <div className='flex items-center justify-center gap-1'>
+              {src ? (
+                <Image
+                  className="p-1 rounded-md border-2"
+                  src={src}
+                  alt={message}
+                  width={width ? width : 50}
+                  height={height ? height : 50}
+                />
+              ) : null}
+              <div>
+                <div className={`${type}`}>{message}</div>
                 <div>{description}</div>
+              </div>
             </div>
-            <button onClick={handleClose} className='px-1  hover:bg-blue-300'>x</button>
-        </div>
-        )
+
+            <button onClick={handleClose} className={`toastify-close`}>
+              x
+            </button>
+          </div>
+        );
 };
 
 export default BasicToast;

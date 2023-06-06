@@ -15,3 +15,23 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
+.toast-success{
+  @apply fixed flex items-center justify-center gap-2 z-50 bg-green-200 text-green-700 p-4 rounded-md shadow-md 
+}
+.toast-error{
+  @apply fixed flex items-center justify-center gap-2 z-50 bg-red-200 text-red-700 p-4 rounded-md shadow-md 
+}
+.toast-info{
+  @apply fixed flex items-center justify-center gap-2 z-50 bg-blue-200 text-blue-700 p-4 rounded-md shadow-md 
+}
+.toastify-default{
+  @apply fixed flex items-center justify-center gap-2 z-50 bg-slate-200 text-black p-4 rounded-md shadow-md 
+}
+.toast__content {
+
+@apply font-medium
+
+}
+.toastify-close{
+  @apply text-xs hover:scale-125 relative right-0 top-0
+}

@@ -45,10 +45,26 @@ return(
 
 
 
-      
+      {/* simple Effect */}
 
+
+      <div className="flex items-center justify-center gap-[21rem] mx-[4rem] my-[6rem]">
+        <Buttondesignone label={"Button Hover"} type={"btn_redsimple"} />
+        <Buttondesignone label={"Button Hover"} type={"btn_greensimple"}  />
+        <Buttondesignone label={"Button Hover"} type={"btn_graysimple"} />
+        
+        </div> 
+           
+          {/* Dark Button */}
+
+          <div className="flex items-center justify-center gap-[21rem] mx-[4rem] my-[6rem]">
+        <Buttondesignone label={"Button Hover"} type={"btn_reddark"} />
+        <Buttondesignone label={"Button Hover"} type={"btn_greendark"}  />
+        <Buttondesignone label={"Button Hover"} type={"btn_graydark"} />
+        
+        </div> 
   
- 
+          
   
 
 

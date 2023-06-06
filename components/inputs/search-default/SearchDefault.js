@@ -1,8 +1,11 @@
+"use client";
 import { FiSearch } from "react-icons/fi";
+
 const SearchDefault = ({
   placeholder,
   textclr,
   icon,
+  iconclr,
   style,
   text,
   bg,
@@ -10,7 +13,7 @@ const SearchDefault = ({
   radius,
   outline,
   onChange,
-  onClick,
+  onClickSearch,
 }) => {
   return (
     <div className="flex gap-1">
@@ -24,7 +27,7 @@ const SearchDefault = ({
           onChange={onChange}
         />
         <div className="absolute top-5 left-44 text-gray-600 ">
-          <FiSearch onClick={onClick} />
+          <FiSearch onClick={onClickSearch} />
         </div>
       </div>
     </div>

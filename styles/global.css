@@ -15,15 +15,27 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
+/*remove search input default */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance: none;
+}
 
 @layer components {
   .search-default {
-    @apply m-2 p-2 border-2  bg-inherit placeholder:text-gray-600 focus:outline-none text-gray-500 appearance-none;
+    @apply m-2 p-2 border-2 bg-inherit placeholder:text-gray-600 focus:outline-none text-gray-500 appearance-none;
   }
 }
 @layer components {
-  .searchOutline {
+  .search-outline {
     @apply m-2 p-2 border-2 border-stone-800   placeholder:text-gray-600 focus:outline-none text-gray-500;
+  }
+}
+@layer components {
+  .search-underline {
+    @apply m-2 p-2 relative border-b-2 border-b-slate-500 appearance-none outline-none;
   }
 }
 

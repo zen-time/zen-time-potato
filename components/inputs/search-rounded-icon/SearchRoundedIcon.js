@@ -6,12 +6,9 @@ const SearchRoundedIcon = ({
   icon,
   iconclr,
   iconbg,
-  style,
-  text,
   bg,
   border,
   radius,
-  outline,
   onClickSearch,
   onChange,
 }) => {
@@ -21,12 +18,12 @@ const SearchRoundedIcon = ({
         <input
           type="search"
           placeholder={placeholder}
-          className={`bg-${bg} border-2 border-${border} outline-0 p-2.5 text-lg rounded-${radius} text-${textclr}`}
+          className={`border-2 border-${border} outline-0 p-2.5 text-lg rounded-${radius} text-${textclr}`}
           onChange={onChange}
         />
         {icon && (
           <FiSearch
-            className={`absolute top-5 right-5 text-${iconclr} p-2 bg-${iconbg} rounded-2xl w-8 h-8 `}
+            className={`absolute top-5 right-4 text-${iconclr} p-2 bg-${iconbg} rounded-2xl w-8 h-8 `}
             onClick={onClickSearch}
           />
         )}

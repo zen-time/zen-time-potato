@@ -5,7 +5,6 @@ const SearchSquareIcon = ({
   textclr,
   icon,
   iconclr,
-  style,
   text,
   bg,
   border,
@@ -23,12 +22,12 @@ const SearchSquareIcon = ({
         <input
           type="search"
           placeholder={placeholder}
-          className={`bg-${bg} border-2 border-${border} outline-0 p-2.5 text-lg text-${textclr}`}
+          className={`border-2 border-${border} outline-0 p-2.5 text-lg text-${textclr} outline-${outline}`}
           onChange={onChange}
         />
         {icon ? (
           <FiSearch
-            className={`absolute top-3 right-13 text-${iconclr} p-2 bg-${iconbg}-700  w-12 h-12`}
+            className={`absolute top-3 right-13 text-${iconclr} p-2 bg-${iconbg}  w-12 h-12`}
             onClick={onClickSearch}
           />
         ) : (

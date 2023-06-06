@@ -14,22 +14,31 @@ const SearchDefault = ({
   outline,
   onChange,
   onClickSearch,
+  placeholderclr,
 }) => {
   return (
     <div className="flex gap-1">
-      <div className="inline relative">
+      <form className="inline relative" onClick={onClickSearch}>
         <input
-          className={`appearance-none ${
-            style ? style : "search-default"
-          } border-[${border}] bg-[${bg}] outline-[${outline}]`}
+          className={`m-2 p-2 border-2 border-${border} bg-inherit placeholder:text-${placeholderclr} text-${textclr} rounded-${radius} bg-${bg} outline-2 outline-${outline}`}
           type="search"
           placeholder={placeholder}
           onChange={onChange}
         />
-        <div className="absolute top-5 left-44 text-gray-600 ">
-          <FiSearch onClick={onClickSearch} />
-        </div>
-      </div>
+
+        {icon ? (
+          <div className={`absolute top-5 left-44 text-${iconclr}`}>
+            <FiSearch onClick={onClickSearch} />
+          </div>
+        ) : (
+          <button
+            type="submit"
+            className={`absolute top-2 left-56 text-${iconclr} btn-primary`}
+          >
+            {text ? text : "search"}
+          </button>
+        )}
+      </form>
     </div>
   );
 };

@@ -1,14 +1,10 @@
-import Login from "@components/authentication";
+import ClientTable from "@components/tables/clientTable";
 import React from "react";
 
 const Home = () => {
   return (
     <div>
-      <Login
-        Signin="Sign In Account"
-        email="Email Address"
-        Password="Password"
-      />
+      <ClientTable />
     </div>
   );
 };

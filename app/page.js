@@ -1,14 +1,10 @@
-import Login from "@components/authentication";
-import React from "react";
+//input components
+import BussinessInfoInputComponent from "@components/inputs/business-information/BusinessInfoInputComponent";
 
 const Home = () => {
   return (
     <div>
-      <Login
-        Signin="Sign In Account"
-        email="Email Address"
-        Password="Password"
-      />
+      <BussinessInfoInputComponent />
     </div>
   );
 };

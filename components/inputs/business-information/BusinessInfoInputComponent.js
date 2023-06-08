@@ -22,155 +22,201 @@ const BussinessInfoInputComponent = () => {
 
   return (
     <article className="px-8 py-4">
-      <h2 className="text-xl font-semibold mb-2 pb-2">Business Information</h2>
+      <h2 className="text-2xl font-semibold mb-2 pb-2">Business Information</h2>
       <div className="grid grid-cols-2 gap-4">
-        <div className="form-control w-full max-w-xs ">
-          <label htmlFor="" className="label">
-            <span className="label-text">Company Name</span>
+        <div className="join">
+          <label
+            htmlFor=""
+            className="join-item btn label-text w-full max-w-xs"
+          >
+            <span>Company Name</span>
           </label>
           <input
             id=""
             type="text"
             placeholder="Type here"
-            className="input input-bordered w-full max-w-xs"
+            className="input input-bordered join-item w-full max-w-xs"
           />
         </div>
-        <div className="form-control w-full max-w-xs ">
-          <label htmlFor="" className="label">
-            <span className="label-text">Company Display Name</span>
+        <div className="join">
+          <label
+            htmlFor=""
+            className="join-item btn label-text w-full max-w-xs"
+          >
+            <span>Company Display Name</span>
           </label>
           <input
             id=""
             type="text"
             placeholder="Type here"
-            className="input input-bordered w-full max-w-xs"
+            className="input input-bordered join-item w-full max-w-xs"
           />
         </div>
-        <div className="form-control w-full max-w-xs ">
-          <label htmlFor="" className="label">
-            <span className="label-text">Client ID</span>
+        <div className="join">
+          <label
+            htmlFor=""
+            className="join-item btn label-text w-full max-w-xs"
+          >
+            <span className="btn label-text ">Client ID</span>
           </label>
           <input
             id=""
             type="email"
             placeholder="Type here"
-            className="input input-bordered w-full max-w-xs"
+            className="input input-bordered join-item w-full max-w-xs"
           />
         </div>
-        <div className="form-control w-full max-w-xs ">
-          <label htmlFor="" className="label">
-            <span className="label-text">Client Short Name</span>
+        <div className="join">
+          <label
+            htmlFor=""
+            className="join-item btn label-text w-full max-w-xs"
+          >
+            <span>Client Short Name</span>
           </label>
           <input
             id=""
             type="text"
             placeholder="Type here"
-            className="input input-bordered w-full max-w-xs"
+            className="input input-bordered join-item w-full max-w-xs"
           />
         </div>
-        <div className="form-control w-full max-w-xs ">
-          <label htmlFor="" className="label">
-            <span className="label-text">Email</span>
+        <div className="join">
+          <label
+            htmlFor=""
+            className="join-item btn label-text w-full max-w-xs"
+          >
+            <span>Email</span>
           </label>
           <input
             id=""
             type="text"
             placeholder="Type here"
-            className="input input-bordered w-full max-w-xs"
+            className="input input-bordered join-item w-full max-w-xs"
           />
         </div>
-        <div className="form-control w-full max-w-xs ">
-          <label htmlFor="" className="label">
-            <span className="label-text">Contact Number</span>
+        <div className="join">
+          <label
+            htmlFor=""
+            className="join-item btn label-text w-full max-w-xs"
+          >
+            <span>Contact Number</span>
           </label>
           <input
             id=""
             type="text"
             placeholder="Type here"
-            className="input input-bordered w-full max-w-xs"
+            className="input input-bordered join-item w-full max-w-xs"
           />
         </div>
-        <div className="form-control w-full max-w-xs ">
-          <label htmlFor="" className="label">
-            <span className="label-text">Federal ID</span>
+        <div className="join">
+          <label
+            htmlFor=""
+            className="join-item btn label-text w-full max-w-xs"
+          >
+            <span>Federal ID</span>
           </label>
           <input
             id=""
             type="text"
             placeholder="Type here"
-            className="input input-bordered w-full max-w-xs"
+            className="input input-bordered join-item w-full max-w-xs"
           />
         </div>
-        <div className="form-control w-full max-w-xs ">
-          <label htmlFor="" className="label">
-            <span className="label-text">Website</span>
+        <div className="join">
+          <label
+            htmlFor=""
+            className="join-item btn label-text w-full max-w-xs"
+          >
+            <span>Website</span>
           </label>
           <input
             type="url"
             name="client-ownership"
-            className="input input-bordered w-full max-w-xs"
+            className="input input-bordered join-item w-full max-w-xs"
+            placeholder="Type Your URL.."
           />
         </div>
-        <div className="form-control w-full max-w-xs ">
-          <label htmlFor="" className="label">
-            <span className="label-text">Net Terms</span>
+        <div className="join">
+          <label
+            htmlFor=""
+            className="join-item btn label-text w-full max-w-xs"
+          >
+            <span>Net Terms</span>
           </label>
           <input
             id=""
             type="text"
             placeholder="Type here"
-            className="input input-bordered w-full max-w-xs"
+            className="input input-bordered join-item w-full max-w-xs"
           />
         </div>
-        <div className="form-control w-full max-w-xs ">
-          <label htmlFor="" className="label">
-            <span className="label-text ">Job Termination Notice</span>
+        <div className="join flex items-center">
+          <label
+            htmlFor=""
+            className="join-item btn label-text w-full max-w-xs"
+          >
+            <span>Job Termination Notice</span>
           </label>
 
           <Select
+            className="join-item w-full max-w-xs"
             options={jobTerminationNoticeOptions}
             placeholder={"Job Termination Notice"}
             isSearchable={true}
           />
         </div>
-        <div className="form-control w-full max-w-xs ">
-          <label htmlFor="" className="label">
-            <span className="label-text">Fax</span>
+        <div className="join">
+          <label
+            htmlFor=""
+            className="join-item btn label-text w-full max-w-xs"
+          >
+            <span>Fax</span>
           </label>
           <input
             id=""
             type="text"
             placeholder="Type here"
-            className="input input-bordered w-full max-w-xs"
+            className="input input-bordered join-item w-full max-w-xs"
           />
         </div>
-        <div className="form-control w-full max-w-xs ">
-          <label htmlFor="" className="label">
-            <span className="label-text">Client Status</span>
+        <div className="join flex items-center">
+          <label
+            htmlFor=""
+            className="join-item btn label-text w-full max-w-xs"
+          >
+            <span>Client Status</span>
           </label>
 
           <Select
+            className="join-item w-full max-w-xs"
             options={clientStatusOptions}
             placeholder={"Client Status"}
             isSearchable={true}
           />
         </div>
-        <div className="form-control w-full max-w-xs ">
-          <label htmlFor="" className="label">
-            <span className="label-text">Client Category</span>
+        <div className="join flex items-center">
+          <label
+            htmlFor=""
+            className="join-item btn label-text w-full max-w-xs"
+          >
+            <span>Client Category</span>
           </label>
 
           <Select
+            className="join-item w-full max-w-xs"
             options={clientCategoryOptions}
             placeholder={"Client Category"}
             isSearchable={true}
           />
         </div>
-        <div className="form-control w-full max-w-xs ">
-          <label htmlFor="client-ownership" className="label">
-            <span className="label-text">Client Ownership</span>
+        <div className="join flex items-center gap-1">
+          <label
+            htmlFor="client-ownership"
+            className="join-item btn label-text w-full max-w-xs"
+          >
+            <span>Client Ownership</span>
           </label>
-          <div className="flex flex-col md:flex-row w-96 md:gap-3 lg:gap-3 xl:gap-3">
+          <div className="flex flex-col md:flex-row w-96 md:gap-3 lg:gap-3 xl:gap-3 join-item">
             <div className="mt-3 flex gap-1">
               <input
                 id="client-ownership"

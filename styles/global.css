@@ -17,8 +17,9 @@
 }
 
 .table_head_text {
-  @apply text-blue-300;
+  @apply text-gray-400;
 }
-.title {
-  @apply text-cyan-400;
+
+.td_text_center {
+  @apply text-center;
 }

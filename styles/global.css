@@ -15,3 +15,10 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
+
+.table_head_text {
+  @apply text-blue-300;
+}
+.title {
+  @apply text-cyan-400;
+}

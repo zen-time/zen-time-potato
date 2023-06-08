@@ -14,11 +14,11 @@ const BillingAddressInputComponent = () => {
   return (
     <article className="px-8 py-4">
       <section>
-        <h2 className="text-xl font-semibold text-center mb-2 pb-2">
+        <h2 className="text-xl font-semibold mb-6 pb-2 ">
           Placement-Full Time
         </h2>
 
-        <div className="flex justify-around gap-2">
+        <div className="flex justify-between">
           <div className="sm:">
             <Select
               options={netTermsOptions}
@@ -36,10 +36,8 @@ const BillingAddressInputComponent = () => {
         </div>
       </section>
       <hr className="my-8 " />
-      <section className="flex flex-col gap-8">
-        <h2 className="text-center text-xl font-semibold  pb-2 mb-2">
-          Invoice Address
-        </h2>
+      <section className="flex flex-col gap-6">
+        <h2 className="text-xl font-semibold">Invoice Address</h2>
         <div className="mt-2">
           <h3 className="text-semibold text-lg underline">Billing Address1</h3>
           <div className="grid grid-cols-2 gap-4">

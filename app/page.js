@@ -4,10 +4,10 @@ import BussinessInfoInputComponent from "@components/inputs/business-information
 
 const Home = () => {
   return (
-    <div>
-      {/* <BussinessInfoInputComponent /> */}
+    <>
+      <BussinessInfoInputComponent />
       <BillingAddressInputComponent />
-    </div>
+    </>
   );
 };
 export default Home;

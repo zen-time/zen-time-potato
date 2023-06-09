@@ -15,3 +15,11 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
+
+.table_head_text {
+  @apply text-gray-400;
+}
+
+.td_text_center {
+  @apply text-center;
+}

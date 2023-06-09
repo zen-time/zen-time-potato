@@ -1,11 +1,14 @@
-import Inputs from "@components/inputs";
+import ClientTable from "@components/tables/clientTable";
+import React from "react";
 
 const Home = () => {
   return (
-    <>
-      <Inputs />
-    </>
+    <div>
+      <ClientTable
+        textColor={"table_head_text"}
+        tableData_text_center={"td_text_center"}
+      />
+    </div>
   );
 };
-
 export default Home;

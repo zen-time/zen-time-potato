@@ -11,6 +11,26 @@ const BillingAddressInputComponent = () => {
     { value: "salary plus Commission", label: "Salary plus Commission" },
     { value: "graduated commission", label: "Graduated commission" },
   ];
+
+  // select element custom styles
+  const customStyles = {
+    control: (base) => ({
+      ...base,
+      height: 38,
+      minHeight: 38,
+      borderRadius: 10,
+    }),
+  };
+  // select element custom theme
+  const theme = (theme) => ({
+    ...theme,
+    borderRadius: 0,
+    colors: {
+      ...theme.colors,
+      primary25: "lightgray",
+      primary: "gray",
+    },
+  });
   return (
     <article className="px-8 py-4">
       <section>
@@ -18,148 +38,152 @@ const BillingAddressInputComponent = () => {
           Placement-Full Time
         </h2>
 
-        <div className="flex justify-between">
-          <div className="sm:">
+        <div className="grid grid-cols-2 gap-4">
+          <div className="join join-vertical btn w-full max-w-xl">
+            <span className=" join-item ">Net Terms</span>
             <Select
+              className="join-item"
               options={netTermsOptions}
               placeholder={"Net terms"}
               isSearchable={true}
+              styles={customStyles}
+              theme={theme}
             />
           </div>
-          <div>
+          <div className="join join-vertical btn w-full max-w-xl">
+            <span className=" join-item">Commission Type</span>
             <Select
               options={commissionTypeOptions}
               placeholder={"commission type"}
               isSearchable={true}
+              styles={customStyles}
+              theme={theme}
             />
           </div>
         </div>
       </section>
       <hr className="my-8 " />
       <section className="flex flex-col gap-6">
-        <h2 className="text-xl font-semibold">Invoice Address</h2>
-        <div className="mt-2">
+        <h2 className="text-2xl font-semibold">Invoice Address</h2>
+        <div className="mt-2 flex flex-col gap-5">
           <h3 className="text-semibold text-lg underline">Billing Address1</h3>
           <div className="grid grid-cols-2 gap-4">
-            <div className="form-control w-full max-w-xs ">
-              <label htmlFor="" className="label">
+            <div className=" w-full max-w-xs join">
+              <label htmlFor="" className="join-item btn w-32 max-w-xs ">
                 <span className="label-text">Street Name</span>
               </label>
               <input
                 id=""
                 type="text"
+                className="input input-bordered w-full max-w-xs join-item"
                 placeholder="Type here"
-                className="input input-bordered w-full max-w-xs"
               />
             </div>
-            <div className="form-control w-full max-w-xs ">
-              <label htmlFor="" className="label">
+            <div className=" w-full max-w-xs join">
+              <label htmlFor="" className=" join-item btn w-32 max-w-xs">
                 <span className="label-text">County</span>
               </label>
               <input
                 id=""
                 type="text"
+                className="input input-bordered w-full max-w-xs join-item"
                 placeholder="Type here"
-                className="input input-bordered w-full max-w-xs"
               />
             </div>
-            <div className="form-control w-full max-w-xs ">
-              <label htmlFor="" className="label">
+            <div className=" w-full max-w-xs join">
+              <label htmlFor="" className=" join-item btn w-32 max-w-xs">
                 <span className="label-text">State</span>
               </label>
               <input
                 id=""
                 type="text"
+                className="input input-bordered w-full max-w-xs join-item"
                 placeholder="Type here"
-                className="input input-bordered w-full max-w-xs"
               />
             </div>
-            <div className="form-control w-full max-w-xs ">
-              <label htmlFor="" className="label">
+            <div className=" w-full max-w-xs join">
+              <label htmlFor="" className=" join-item btn w-32 max-w-xs">
                 <span className="label-text">Zip Code</span>
               </label>
               <input
                 id=""
                 type="text"
+                className="input input-bordered w-full max-w-xs join-item"
                 placeholder="Type here"
-                className="input input-bordered w-full max-w-xs"
               />
             </div>
-            <div className="form-control w-full max-w-xs ">
-              <label htmlFor="" className="label">
+            <div className=" w-full max-w-xs join">
+              <label htmlFor="" className=" join-item btn w-32 max-w-xs">
                 <span className="label-text">Country</span>
               </label>
               <input
                 id=""
                 type="text"
+                className="input input-bordered w-full max-w-xs join-item"
                 placeholder="Type here"
-                className="input input-bordered w-full max-w-xs"
               />
             </div>
           </div>
         </div>
-        <div className="mt-2">
+        <div className="mt-2 flex flex-col gap-5">
           <h3 className="text-semibold text-lg underline">Billing Address2</h3>
           <div className="grid grid-cols-2 gap-4">
-            <div className="form-control w-full max-w-xs ">
-              <label htmlFor="" className="label">
+            <div className=" w-full max-w-xs join">
+              <label htmlFor="" className=" join-item btn w-32 max-w-xs">
                 <span className="label-text">Street Name</span>
               </label>
               <input
                 id=""
                 type="text"
                 placeholder="Type here"
-                className="input input-bordered w-full max-w-xs"
+                className="input input-bordered w-full max-w-xs join-item"
               />
             </div>
-            <div className="form-control w-full max-w-xs ">
-              <label htmlFor="" className="label">
+            <div className=" w-full max-w-xs join">
+              <label htmlFor="" className=" join-item btn w-32 max-w-xs">
                 <span className="label-text">County</span>
               </label>
               <input
                 id=""
                 type="text"
                 placeholder="Type here"
-                className="input input-bordered w-full max-w-xs"
+                className="input input-bordered w-full max-w-xs join-item"
               />
             </div>
-            <div className="form-control w-full max-w-xs ">
-              <label htmlFor="" className="label">
+            <div className=" w-full max-w-xs join">
+              <label htmlFor="" className=" join-item btn w-32 max-w-xs">
                 <span className="label-text">State</span>
               </label>
               <input
                 id=""
                 type="text"
                 placeholder="Type here"
-                className="input input-bordered w-full max-w-xs"
+                className="input input-bordered w-full max-w-xs join-item"
               />
             </div>
-            <div className="form-control w-full max-w-xs ">
-              <label htmlFor="" className="label">
+            <div className=" w-full max-w-xs join">
+              <label htmlFor="" className=" join-item btn w-32 max-w-xs">
                 <span className="label-text">Zip Code</span>
               </label>
               <input
                 id=""
                 type="text"
                 placeholder="Type here"
-                className="input input-bordered w-full max-w-xs"
+                className="input input-bordered w-full max-w-xs join-item"
               />
             </div>
-            <div className="form-control w-full max-w-xs ">
-              <label htmlFor="" className="label">
+            <div className=" w-full max-w-xs join">
+              <label htmlFor="" className=" join-item btn w-32 max-w-xs">
                 <span className="label-text">Country</span>
               </label>
               <input
                 id=""
                 type="text"
                 placeholder="Type here"
-                className="input input-bordered w-full max-w-xs"
+                className="input input-bordered w-full max-w-xs join-item"
               />
             </div>
-            <div
-              className="p-2 mt-6 text-center flex 
-           justify-center items-center lg:m-10 lg:pr-48 xl:m-10 xl:pr-[25rem]"
-            >
+            <div className="flex items-center px-2">
               <h3 className=" text-[0.7rem] text-blue-400 font-semibold underline cursor-pointer md:text-lg ">
                 Add More Address
               </h3>

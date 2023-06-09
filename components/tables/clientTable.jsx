@@ -8,8 +8,8 @@ const ClientTable = ({ textColor, tableData_text_center }) => {
       <div className="flex justify-between  w-[100%] ">
         <div>
           {/* search input */}
-          <div className="join">
-            <input className="input  join-item" placeholder="Search.." />
+          <div className="join ">
+            <input className="input  join-item  " placeholder="Search.." />
             <button className="btn join-item rounded-r-full">Search</button>
           </div>
 
@@ -31,13 +31,15 @@ const ClientTable = ({ textColor, tableData_text_center }) => {
           </div>
           {/* exit button */}
         </div>
-        <button className="btn m-2 bg-red-300 hover:text-gray-500">Exit</button>
+        <button className="btn m-2 bg-red-300 hover:text-gray-500 ">
+          Exit
+        </button>
       </div>
       {/* table */}
-      <div className="overflow-x-auto">
+      <div className="overflow-x-auto ">
         <table className="table table-md border-2 border-gray-200 drop-shadow-md ">
           {/* head */}
-          <thead className="">
+          <thead>
             <tr className={`bg-neutral-content text-base ${textColor}`}>
               <th></th>
               <th>Business Name</th>
@@ -57,9 +59,7 @@ const ClientTable = ({ textColor, tableData_text_center }) => {
             {/* row 1 */}
             <tr className="hover ">
               <th>1</th>
-              <td className="py-4 px-6 text-sm font-medium text-gray-900 ">
-                Akash{" "}
-              </td>
+              <td className="py-4 px-6 text-sm font-medium  ">Akash </td>
               <td>75123</td>
               <td>akash@inc.com</td>
               <td>9629653377</td>
@@ -74,7 +74,7 @@ const ClientTable = ({ textColor, tableData_text_center }) => {
               </td>
             </tr>
             {/* row 2 */}
-            <tr className="hover">
+            <tr className="hover ">
               <th>2</th>
               <td className="py-4 px-6 text-sm font-medium text-gray-900 ">
                 Kesavan
@@ -94,7 +94,7 @@ const ClientTable = ({ textColor, tableData_text_center }) => {
               </td>
             </tr>
             {/* row 3 */}
-            <tr className="hover">
+            <tr className="hover ">
               <th>3</th>
               <td className="py-4 px-6 text-sm font-medium text-gray-900 ">
                 Naveen Kumar
@@ -114,7 +114,7 @@ const ClientTable = ({ textColor, tableData_text_center }) => {
               </td>
             </tr>
             {/* row 4 */}
-            <tr className="hover">
+            <tr className="hover ">
               <th>4</th>
               <td className="py-4 px-6 text-sm font-medium text-gray-900 ">
                 Arun Prakash
@@ -134,7 +134,7 @@ const ClientTable = ({ textColor, tableData_text_center }) => {
               </td>
             </tr>
             {/* row 5 */}
-            <tr className="hover">
+            <tr className="hover ">
               <th>5</th>
               <td className="py-4 px-6 text-sm font-medium text-gray-900 ">
                 Manoj
@@ -154,7 +154,7 @@ const ClientTable = ({ textColor, tableData_text_center }) => {
               </td>
             </tr>
             {/* row 6 */}
-            <tr className="hover">
+            <tr className="hover ">
               <th>6</th>
               <td className="py-4 px-6 text-sm font-medium text-gray-900 ">
                 Vishnu

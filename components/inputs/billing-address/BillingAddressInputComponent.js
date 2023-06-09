@@ -14,7 +14,7 @@ const BillingAddressInputComponent = () => {
   return (
     <article className="px-8 py-4">
       <section>
-        <h2 className="text-xl font-semibold mb-6 pb-2 ">
+        <h2 className="text-2xl font-semibold mb-6 pb-2 ">
           Placement-Full Time
         </h2>
 

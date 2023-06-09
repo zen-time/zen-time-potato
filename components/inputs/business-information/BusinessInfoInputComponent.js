@@ -3,6 +3,7 @@
 import Select from "react-select";
 
 const BussinessInfoInputComponent = () => {
+  //select element options
   const jobTerminationNoticeOptions = [
     { value: "aaa", label: "aaa" },
     { value: "bbb", label: "bbb" },
@@ -20,19 +21,39 @@ const BussinessInfoInputComponent = () => {
     { value: "ccc", label: "ccc" },
   ];
 
+  // select element custom styles
+  const customStyles = {
+    control: (base) => ({
+      ...base,
+      height: 48,
+      minHeight: 48,
+      borderRadius: 10,
+    }),
+  };
+  // select element custom theme
+  const theme = (theme) => ({
+    ...theme,
+    borderRadius: 0,
+    colors: {
+      ...theme.colors,
+      primary25: "lightgray",
+      primary: "gray",
+    },
+  });
+
   return (
-    <article className="px-8 py-4">
+    <article className="px-8 py-6">
       <h2 className="text-2xl font-semibold mb-2 pb-2">Business Information</h2>
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-2 gap-12">
         <div className="join">
           <label
-            htmlFor=""
-            className="join-item btn label-text w-full max-w-xs"
+            htmlFor="company-name"
+            className="join-item btn label-text w-full  max-w-xs"
           >
             <span>Company Name</span>
           </label>
           <input
-            id=""
+            id="company-name"
             type="text"
             placeholder="Type here"
             className="input input-bordered join-item w-full max-w-xs"
@@ -40,13 +61,13 @@ const BussinessInfoInputComponent = () => {
         </div>
         <div className="join">
           <label
-            htmlFor=""
+            htmlFor="company-display-name"
             className="join-item btn label-text w-full max-w-xs"
           >
             <span>Company Display Name</span>
           </label>
           <input
-            id=""
+            id="company-display-name"
             type="text"
             placeholder="Type here"
             className="input input-bordered join-item w-full max-w-xs"
@@ -54,13 +75,13 @@ const BussinessInfoInputComponent = () => {
         </div>
         <div className="join">
           <label
-            htmlFor=""
+            htmlFor="client-id"
             className="join-item btn label-text w-full max-w-xs"
           >
-            <span className="btn label-text ">Client ID</span>
+            <span>Client ID</span>
           </label>
           <input
-            id=""
+            id="client-id"
             type="email"
             placeholder="Type here"
             className="input input-bordered join-item w-full max-w-xs"
@@ -68,13 +89,13 @@ const BussinessInfoInputComponent = () => {
         </div>
         <div className="join">
           <label
-            htmlFor=""
+            htmlFor="client-short-name"
             className="join-item btn label-text w-full max-w-xs"
           >
             <span>Client Short Name</span>
           </label>
           <input
-            id=""
+            id="client-short-name"
             type="text"
             placeholder="Type here"
             className="input input-bordered join-item w-full max-w-xs"
@@ -82,13 +103,13 @@ const BussinessInfoInputComponent = () => {
         </div>
         <div className="join">
           <label
-            htmlFor=""
+            htmlFor="email"
             className="join-item btn label-text w-full max-w-xs"
           >
             <span>Email</span>
           </label>
           <input
-            id=""
+            id="email"
             type="text"
             placeholder="Type here"
             className="input input-bordered join-item w-full max-w-xs"
@@ -96,13 +117,13 @@ const BussinessInfoInputComponent = () => {
         </div>
         <div className="join">
           <label
-            htmlFor=""
+            htmlFor="contact-number"
             className="join-item btn label-text w-full max-w-xs"
           >
             <span>Contact Number</span>
           </label>
           <input
-            id=""
+            id="contact-number"
             type="text"
             placeholder="Type here"
             className="input input-bordered join-item w-full max-w-xs"
@@ -110,13 +131,13 @@ const BussinessInfoInputComponent = () => {
         </div>
         <div className="join">
           <label
-            htmlFor=""
+            htmlFor="federal-id"
             className="join-item btn label-text w-full max-w-xs"
           >
             <span>Federal ID</span>
           </label>
           <input
-            id=""
+            id="federal-id"
             type="text"
             placeholder="Type here"
             className="input input-bordered join-item w-full max-w-xs"
@@ -124,12 +145,13 @@ const BussinessInfoInputComponent = () => {
         </div>
         <div className="join">
           <label
-            htmlFor=""
+            htmlFor="website"
             className="join-item btn label-text w-full max-w-xs"
           >
             <span>Website</span>
           </label>
           <input
+            id="website"
             type="url"
             name="client-ownership"
             className="input input-bordered join-item w-full max-w-xs"
@@ -138,13 +160,13 @@ const BussinessInfoInputComponent = () => {
         </div>
         <div className="join">
           <label
-            htmlFor=""
+            htmlFor="net-terms"
             className="join-item btn label-text w-full max-w-xs"
           >
             <span>Net Terms</span>
           </label>
           <input
-            id=""
+            id="net-terms"
             type="text"
             placeholder="Type here"
             className="input input-bordered join-item w-full max-w-xs"
@@ -152,28 +174,31 @@ const BussinessInfoInputComponent = () => {
         </div>
         <div className="join flex items-center">
           <label
-            htmlFor=""
+            htmlFor="job-termination-notice"
             className="join-item btn label-text w-full max-w-xs"
           >
             <span>Job Termination Notice</span>
           </label>
 
           <Select
-            className="join-item w-full max-w-xs"
+            id="job-termination-notice"
+            className="join-item w-full max-w-xs "
             options={jobTerminationNoticeOptions}
             placeholder={"Job Termination Notice"}
             isSearchable={true}
+            styles={customStyles}
+            theme={theme}
           />
         </div>
         <div className="join">
           <label
-            htmlFor=""
+            htmlFor="fax"
             className="join-item btn label-text w-full max-w-xs"
           >
             <span>Fax</span>
           </label>
           <input
-            id=""
+            id="fax"
             type="text"
             placeholder="Type here"
             className="input input-bordered join-item w-full max-w-xs"
@@ -181,62 +206,66 @@ const BussinessInfoInputComponent = () => {
         </div>
         <div className="join flex items-center">
           <label
-            htmlFor=""
+            htmlFor="client-status"
             className="join-item btn label-text w-full max-w-xs"
           >
             <span>Client Status</span>
           </label>
 
           <Select
+            id="client-status"
             className="join-item w-full max-w-xs"
             options={clientStatusOptions}
             placeholder={"Client Status"}
             isSearchable={true}
+            styles={customStyles}
+            theme={theme}
           />
         </div>
         <div className="join flex items-center">
           <label
-            htmlFor=""
+            htmlFor="client-category"
             className="join-item btn label-text w-full max-w-xs"
           >
             <span>Client Category</span>
           </label>
 
           <Select
+            id="client-category"
             className="join-item w-full max-w-xs"
             options={clientCategoryOptions}
             placeholder={"Client Category"}
             isSearchable={true}
+            styles={customStyles}
+            theme={theme}
           />
         </div>
-        <div className="join flex items-center gap-1">
+        <div className="join flex items-center gap-4">
           <label
             htmlFor="client-ownership"
             className="join-item btn label-text w-full max-w-xs"
           >
             <span>Client Ownership</span>
           </label>
-          <div className="flex flex-col md:flex-row w-96 md:gap-3 lg:gap-3 xl:gap-3 join-item">
-            <div className="mt-3 flex gap-1">
+          <div className="join-item w-full max-w-xs ">
+            <div className=" flex items-center gap-1">
               <input
                 id="client-ownership"
                 type="radio"
                 name="client-ownership"
+                className="radio w-4 h-4"
                 checked
               />
-              <span className="text-[0.8rem]  md:text-[1rem] lg:text-[1rem] xl:text-[1rem] ">
-                Visible To Selected Owners
-              </span>
+              <span className=" ">Visible To Selected Owners</span>
             </div>
-            <div className="mt-3 flex flex-row gap-1">
+            <div className=" flex items-center gap-1">
               <input
                 id="client-ownership"
                 type="radio"
                 name="client-ownership"
+                className="radio w-4 h-4"
               />
-              <span className="text-[0.8rem]  md:text-[1rem] lg:text-[1rem] xl:text-[1rem]">
-                Visible To All
-              </span>
+              <span className=" ">Visible To All</span>
             </div>
           </div>
         </div>

@@ -48,7 +48,7 @@ const BussinessInfoInputComponent = () => {
         <div className="join">
           <label
             htmlFor="company-name"
-            className="join-item btn label-text w-full  max-w-xs"
+            className="join-item btn label-text lg:w-56 w-48  max-w-xs"
           >
             <span>Company Name</span>
           </label>
@@ -56,13 +56,13 @@ const BussinessInfoInputComponent = () => {
             id="company-name"
             type="text"
             placeholder="Type here"
-            className="input input-bordered join-item w-full max-w-xs"
+            className="input input-bordered join-item w-full max-w-xs "
           />
         </div>
         <div className="join">
           <label
             htmlFor="company-display-name"
-            className="join-item btn label-text w-full max-w-xs"
+            className="join-item btn label-text lg:w-56 w-48 max-w-xs"
           >
             <span>Company Display Name</span>
           </label>
@@ -76,7 +76,7 @@ const BussinessInfoInputComponent = () => {
         <div className="join">
           <label
             htmlFor="client-id"
-            className="join-item btn label-text w-full max-w-xs"
+            className="join-item btn label-text lg:w-56 w-48 max-w-xs"
           >
             <span>Client ID</span>
           </label>
@@ -90,7 +90,7 @@ const BussinessInfoInputComponent = () => {
         <div className="join">
           <label
             htmlFor="client-short-name"
-            className="join-item btn label-text w-full max-w-xs"
+            className="join-item btn label-text lg:w-56 w-48 max-w-xs"
           >
             <span>Client Short Name</span>
           </label>
@@ -104,7 +104,7 @@ const BussinessInfoInputComponent = () => {
         <div className="join">
           <label
             htmlFor="email"
-            className="join-item btn label-text w-full max-w-xs"
+            className="join-item btn label-text lg:w-56 w-48 max-w-xs"
           >
             <span>Email</span>
           </label>
@@ -118,7 +118,7 @@ const BussinessInfoInputComponent = () => {
         <div className="join">
           <label
             htmlFor="contact-number"
-            className="join-item btn label-text w-full max-w-xs"
+            className="join-item btn label-text lg:w-56 w-48 max-w-xs"
           >
             <span>Contact Number</span>
           </label>
@@ -132,7 +132,7 @@ const BussinessInfoInputComponent = () => {
         <div className="join">
           <label
             htmlFor="federal-id"
-            className="join-item btn label-text w-full max-w-xs"
+            className="join-item btn label-text lg:w-56 w-48 max-w-xs"
           >
             <span>Federal ID</span>
           </label>
@@ -146,7 +146,7 @@ const BussinessInfoInputComponent = () => {
         <div className="join">
           <label
             htmlFor="website"
-            className="join-item btn label-text w-full max-w-xs"
+            className="join-item btn label-text lg:w-56 w-48 max-w-xs"
           >
             <span>Website</span>
           </label>
@@ -161,7 +161,7 @@ const BussinessInfoInputComponent = () => {
         <div className="join">
           <label
             htmlFor="net-terms"
-            className="join-item btn label-text w-full max-w-xs"
+            className="join-item btn label-text lg:w-56 w-48 max-w-xs"
           >
             <span>Net Terms</span>
           </label>
@@ -175,7 +175,7 @@ const BussinessInfoInputComponent = () => {
         <div className="join flex items-center">
           <label
             htmlFor="job-termination-notice"
-            className="join-item btn label-text w-full max-w-xs"
+            className="join-item btn label-text lg:w-56 w-48 max-w-xs"
           >
             <span>Job Termination Notice</span>
           </label>
@@ -193,7 +193,7 @@ const BussinessInfoInputComponent = () => {
         <div className="join">
           <label
             htmlFor="fax"
-            className="join-item btn label-text w-full max-w-xs"
+            className="join-item btn label-text lg:w-56 w-48 max-w-xs"
           >
             <span>Fax</span>
           </label>
@@ -207,7 +207,7 @@ const BussinessInfoInputComponent = () => {
         <div className="join flex items-center">
           <label
             htmlFor="client-status"
-            className="join-item btn label-text w-full max-w-xs"
+            className="join-item btn label-text lg:w-56 w-48 max-w-xs"
           >
             <span>Client Status</span>
           </label>
@@ -225,7 +225,7 @@ const BussinessInfoInputComponent = () => {
         <div className="join flex items-center">
           <label
             htmlFor="client-category"
-            className="join-item btn label-text w-full max-w-xs"
+            className="join-item btn label-text lg:w-56 w-48 max-w-xs"
           >
             <span>Client Category</span>
           </label>
@@ -243,7 +243,7 @@ const BussinessInfoInputComponent = () => {
         <div className="join flex items-center gap-4">
           <label
             htmlFor="client-ownership"
-            className="join-item btn label-text w-full max-w-xs"
+            className="join-item btn label-text lg:w-56 w-48 max-w-xs"
           >
             <span>Client Ownership</span>
           </label>

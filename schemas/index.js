@@ -16,9 +16,24 @@ export const schemaForBussinessInfo = yup.object().shape({
     .url("enter valid url")
     .required("This field is required"),
   netTerms: yup.string().required("This field is required"),
-  jobTerminationNotice: "",
+  jobTerminationNotice: yup.string().required("This field is required"),
   fax: yup.string().required("This field is required"),
-  clientStatus: "",
-  clientCategory: "",
-  clientOwnership: "",
+  clientStatus: yup.string().required("This field is required"),
+  clientCategory: yup.string().required("This field is required"),
+  clientOwnership: yup.string().required("This field is required"),
+});
+
+export const schemaForBillingInfo = yup.object().shape({
+  netTerms: yup.string().required("This field is required"),
+  commissionType: yup.string().required("This field is required"),
+  billAddress1StreetName: yup.string().required("This field is required"),
+  billAddress1County: yup.string().required("This field is required"),
+  billAddress1State: yup.string().required("This field is required"),
+  billAddress1ZipCode: yup.string().required("This field is required"),
+  billAddress1Country: yup.string().required("This field is required"),
+  billAddress2StreetName: yup.string().required("This field is required"),
+  billAddress2County: yup.string().required("This field is required"),
+  billAddress2State: yup.string().required("This field is required"),
+  billAddress2ZipCode: yup.string().required("This field is required"),
+  billAddress2Country: yup.string().required("This field is required"),
 });

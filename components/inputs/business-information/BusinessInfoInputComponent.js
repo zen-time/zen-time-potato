@@ -98,7 +98,7 @@ const BussinessInfoInputComponent = () => {
               id="companyName"
               type="text"
               name="companyName"
-              placeholder={"type here"}
+              placeholder={"Type here"}
               className={`${
                 touched.companyName && errors.companyName && "border-orange-600"
               } input input-bordered join-item w-full max-w-xs`}
@@ -117,7 +117,11 @@ const BussinessInfoInputComponent = () => {
           <div className="join">
             <label
               htmlFor="companyDisplayName"
-              className="join-item btn label-text lg:w-56 w-48 max-w-xs"
+              className={`${
+                touched.companyDisplayName &&
+                errors.companyDisplayName &&
+                "btn-error "
+              } btn join-item  label-text lg:w-56 w-48  max-w-xs `}
             >
               <span>Company Display Name</span>
             </label>
@@ -125,18 +129,18 @@ const BussinessInfoInputComponent = () => {
               id="companyDisplayName"
               type="text"
               name="companyDisplayName"
-              placeholder={
-                errors.companyDisplayName
-                  ? errors.companyDisplayName
-                  : "type here"
-              }
-              className="input input-bordered join-item w-full max-w-xs"
+              placeholder="Type here"
+              className={`${
+                touched.companyDisplayName &&
+                errors.companyDisplayName &&
+                "border-orange-600"
+              } input input-bordered join-item w-full max-w-xs`}
               value={values.companyDisplayName}
               onChange={handleChange}
               onBlur={handleBlur}
             />
           </div>
-          <small className="flex justify-center mt-1">
+          <small className="flex justify-center mt-1 text-orange-600">
             {touched.companyDisplayName && errors.companyDisplayName
               ? errors.companyDisplayName
               : null}
@@ -146,7 +150,9 @@ const BussinessInfoInputComponent = () => {
           <div className="join">
             <label
               htmlFor="clientId"
-              className="join-item btn label-text lg:w-56 w-48 max-w-xs"
+              className={`${
+                touched.clientId && errors.clientId && "btn-error "
+              } btn join-item  label-text lg:w-56 w-48  max-w-xs `}
             >
               <span>Client ID</span>
             </label>
@@ -154,20 +160,28 @@ const BussinessInfoInputComponent = () => {
               id="clientId"
               type="text"
               name="clientId"
-              placeholder={errors.clientId ? errors.clientId : "Type here"}
-              className="input input-bordered join-item w-full max-w-xs"
+              placeholder="Type here"
+              className={`${
+                touched.clientId && errors.clientId && "border-orange-600"
+              } input input-bordered join-item w-full max-w-xs`}
               value={values.clientId}
               onChange={handleChange}
               onBlur={handleBlur}
             />
           </div>
-          <small className="flex justify-center mt-1">{errors.clientId}</small>
+          <small className="flex justify-center mt-1 text-orange-600">
+            {touched.clientId && errors.clientId ? errors.clientId : null}
+          </small>
         </div>
         <div className="flex flex-col">
           <div className="join">
             <label
               htmlFor="clientShortName"
-              className="join-item btn label-text lg:w-56 w-48 max-w-xs"
+              className={`${
+                touched.clientShortName &&
+                errors.clientShortName &&
+                "btn-error "
+              } btn join-item  label-text lg:w-56 w-48  max-w-xs `}
             >
               <span>Client Short Name</span>
             </label>
@@ -175,24 +189,30 @@ const BussinessInfoInputComponent = () => {
               id="clientShortName"
               type="text"
               name="clientShortName"
-              placeholder={
-                errors.clientShortName ? errors.clientShortName : "type here"
-              }
-              className="input input-bordered join-item w-full max-w-xs"
+              placeholder="Type here"
+              className={`${
+                touched.clientShortName &&
+                errors.clientShortName &&
+                "border-orange-600"
+              } input input-bordered join-item w-full max-w-xs`}
               value={values.clientShortName}
               onChange={handleChange}
               onBlur={handleBlur}
             />
           </div>
-          <small className="flex justify-center mt-1">
-            {errors.clientShortName}
+          <small className="flex justify-center mt-1 text-orange-600">
+            {touched.clientShortName && errors.clientShortName
+              ? errors.clientShortName
+              : null}
           </small>
         </div>
         <div className="flex flex-col">
           <div className="join">
             <label
               htmlFor="email"
-              className="join-item btn label-text lg:w-56 w-48 max-w-xs"
+              className={`${
+                touched.email && errors.email && "btn-error "
+              } btn join-item  label-text lg:w-56 w-48  max-w-xs `}
             >
               <span>Email</span>
             </label>
@@ -200,21 +220,27 @@ const BussinessInfoInputComponent = () => {
               id="email"
               type="email"
               name="email"
-              placeholder={errors.email ? errors.email : "type here"}
-              className="input input-bordered join-item w-full max-w-xs"
+              placeholder="Type here"
+              className={`${
+                touched.email && errors.email && "border-orange-600"
+              } input input-bordered join-item w-full max-w-xs`}
               value={values.email}
               onChange={handleChange}
               onBlur={handleBlur}
             />
           </div>
-          <small className="flex justify-center mt-1">{errors.email}</small>
+          <small className="flex justify-center mt-1 text-orange-600">
+            {touched.email && errors.email ? errors.email : null}
+          </small>
         </div>
 
         <div className="flex flex-col">
           <div className="join">
             <label
               htmlFor="contactNumber"
-              className="join-item btn label-text lg:w-56 w-48 max-w-xs"
+              className={`${
+                touched.contactNumber && errors.contactNumber && "btn-error "
+              } btn join-item  label-text lg:w-56 w-48  max-w-xs `}
             >
               <span>Contact Number</span>
             </label>
@@ -222,26 +248,30 @@ const BussinessInfoInputComponent = () => {
               id="contactNumber"
               type="tel"
               name="contactNumber"
-              placeholder={
-                errors.contactNumber
-                  ? errors.contactNumber
-                  : "Mob or Tel Number "
-              }
-              className="input input-bordered join-item w-full max-w-xs"
+              placeholder="Mob or Tel Number "
+              className={`${
+                touched.contactNumber &&
+                errors.contactNumber &&
+                "border-orange-600"
+              } input input-bordered join-item w-full max-w-xs`}
               value={values.contactNumber}
               onChange={handleChange}
               onBlur={handleBlur}
             />
           </div>
-          <small className="flex justify-center mt-1">
-            {errors.contactNumber}
+          <small className="flex justify-center mt-1 text-orange-600">
+            {touched.contactNumber && errors.contactNumber
+              ? errors.contactNumber
+              : null}
           </small>
         </div>
         <div className="flex flex-col">
           <div className="join">
             <label
               htmlFor="federalId"
-              className="join-item btn label-text lg:w-56 w-48 max-w-xs"
+              className={`${
+                touched.federalId && errors.federalId && "btn-error "
+              } btn join-item  label-text lg:w-56 w-48  max-w-xs `}
             >
               <span>Federal ID</span>
             </label>
@@ -249,20 +279,26 @@ const BussinessInfoInputComponent = () => {
               id="federalId"
               type="text"
               name="federalId"
-              placeholder={errors.federalId ? errors.federalId : "Type here "}
-              className="input input-bordered join-item w-full max-w-xs"
+              placeholder="Type here"
+              className={`${
+                touched.federalId && errors.federalId && "border-orange-600"
+              } input input-bordered join-item w-full max-w-xs`}
               value={values.federalId}
               onChange={handleChange}
               onBlur={handleBlur}
             />
           </div>
-          <small className="flex justify-center mt-1">{errors.federalId}</small>
+          <small className="flex justify-center mt-1 text-orange-600">
+            {touched.federalId && errors.federalId ? errors.federalId : null}
+          </small>
         </div>
         <div className="flex flex-col">
           <div className="join">
             <label
               htmlFor="website"
-              className="join-item btn label-text lg:w-56 w-48 max-w-xs"
+              className={`${
+                touched.website && errors.website && "btn-error "
+              } btn join-item  label-text lg:w-56 w-48  max-w-xs `}
             >
               <span>Website</span>
             </label>
@@ -270,20 +306,26 @@ const BussinessInfoInputComponent = () => {
               id="website"
               type="url"
               name="website"
-              className="input input-bordered join-item w-full max-w-xs"
-              placeholder={errors.website ? errors.website : "Type Your URL.."}
+              className={`${
+                touched.website && errors.website && "border-orange-600"
+              } input input-bordered join-item w-full max-w-xs`}
+              placeholder="Type Your URL.."
               value={values.website}
               onChange={handleChange}
               onBlur={handleBlur}
             />
           </div>
-          <small className="flex justify-center mt-1">{errors.website}</small>
+          <small className="flex justify-center mt-1 text-orange-600">
+            {touched.website && errors.website ? errors.website : null}
+          </small>
         </div>
         <div className="flex flex-col">
           <div className="join">
             <label
               htmlFor="netTerms"
-              className="join-item btn label-text lg:w-56 w-48 max-w-xs"
+              className={`${
+                touched.netTerms && errors.netTerms && "btn-error "
+              } btn join-item  label-text lg:w-56 w-48  max-w-xs `}
             >
               <span>Net Terms</span>
             </label>
@@ -291,20 +333,28 @@ const BussinessInfoInputComponent = () => {
               id="netTerms"
               type="text"
               name="netTerms"
-              placeholder={errors.netTerms ? errors.netTerms : "Type here"}
-              className="input input-bordered join-item w-full max-w-xs"
+              placeholder="Type here"
+              className={`${
+                touched.netTerms && errors.netTerms && "border-orange-600"
+              } input input-bordered join-item w-full max-w-xs`}
               value={values.netTerms}
               onChange={handleChange}
               onBlur={handleBlur}
             />
           </div>
-          <small className="flex justify-center mt-1">{errors.netTerms}</small>
+          <small className="flex justify-center mt-1 text-orange-600">
+            {touched.netTerms && errors.netTerms ? errors.netTerms : null}
+          </small>
         </div>
         <div className="flex flex-col">
           <div className="join flex items-center">
             <label
               htmlFor="jobTerminationNotice"
-              className="join-item btn label-text lg:w-56 w-48 max-w-xs"
+              className={`${
+                touched.jobTerminationNotice &&
+                errors.jobTerminationNotice &&
+                "btn-error "
+              } btn join-item  label-text lg:w-56 w-48  max-w-xs `}
             >
               <span>Job Termination Notice</span>
             </label>
@@ -313,7 +363,7 @@ const BussinessInfoInputComponent = () => {
               id="jobTerminationNotice"
               className="join-item w-full max-w-xs "
               options={jobTerminationNoticeOptions}
-              placeholder={"Job Termination Notice"}
+              placeholder="Job Termination Notice"
               value={values.jobTerminationNotice}
               onChange={handleChange}
               onBlur={handleBlur}
@@ -322,13 +372,15 @@ const BussinessInfoInputComponent = () => {
               theme={theme}
             />
           </div>
-          <small className="flex justify-center mt-1">{}</small>
+          <small className="flex justify-center mt-1 text-orange-600">{}</small>
         </div>
         <div className="flex flex-col">
           <div className="join">
             <label
               htmlFor="fax"
-              className="join-item btn label-text lg:w-56 w-48 max-w-xs"
+              className={`${
+                touched.fax && errors.fax && "btn-error "
+              } btn join-item  label-text lg:w-56 w-48  max-w-xs `}
             >
               <span>Fax</span>
             </label>
@@ -336,20 +388,26 @@ const BussinessInfoInputComponent = () => {
               id="fax"
               type="text"
               name="fax"
-              placeholder={errors.fax ? errors.fax : "Type here"}
-              className="input input-bordered join-item w-full max-w-xs"
+              placeholder="Type here"
+              className={`${
+                touched.fax && errors.fax && "border-orange-600"
+              } input input-bordered join-item w-full max-w-xs`}
               value={values.fax}
               onChange={handleChange}
               onBlur={handleBlur}
             />
           </div>
-          <small className="flex justify-center mt-1">{errors.fax}</small>
+          <small className="flex justify-center mt-1 text-orange-600">
+            {touched.fax && errors.fax ? errors.fax : null}
+          </small>
         </div>
         <div className="flex flex-col">
           <div className="join flex items-center">
             <label
               htmlFor="clientStatus"
-              className="join-item btn label-text lg:w-56 w-48 max-w-xs"
+              className={`${
+                touched.clientStatus && errors.clientStatus && "btn-error "
+              } btn join-item  label-text lg:w-56 w-48  max-w-xs `}
             >
               <span>Client Status</span>
             </label>
@@ -367,13 +425,15 @@ const BussinessInfoInputComponent = () => {
               theme={theme}
             />
           </div>
-          <small className="flex justify-center mt-1">{}</small>
+          <small className="flex justify-center mt-1 text-orange-600">{}</small>
         </div>
         <div className="flex flex-col">
           <div className="join flex items-center">
             <label
               htmlFor="clientCategory"
-              className="join-item btn label-text lg:w-56 w-48 max-w-xs"
+              className={`${
+                touched.clientCategory && errors.clientCategory && "btn-error "
+              } btn join-item  label-text lg:w-56 w-48  max-w-xs `}
             >
               <span>Client Category</span>
             </label>
@@ -391,45 +451,60 @@ const BussinessInfoInputComponent = () => {
               theme={theme}
             />
           </div>
-          <small className="flex justify-center mt-1">{}</small>
+          <small className="flex justify-center mt-1 text-orange-600">{}</small>
         </div>
         <div className="flex flex-col">
           <div className="join flex items-center gap-4">
             <label
-              htmlFor="client-ownership"
-              className="join-item btn label-text lg:w-56 w-48 max-w-xs"
+              htmlFor="clientOwnership"
+              className={`${
+                touched.clientOwnership &&
+                errors.clientOwnership &&
+                "btn-error "
+              } btn join-item  label-text lg:w-56 w-48  max-w-xs `}
             >
               <span>Client Ownership</span>
             </label>
             <div className="join-item w-full max-w-xs ">
               <div className=" flex items-center gap-1">
                 <input
-                  id="clientOwnership"
+                  id="visibleToSelectedOwners"
                   type="radio"
                   name="clientOwnership"
-                  className="radio w-4 h-4"
                   value={"visible to selected owners"}
-                  defaultChecked
+                  onChange={handleChange}
+                  className="radio w-4 h-4"
+                  defaultChecked={
+                    values.clientOwnership === "visible to selected owners"
+                  }
                 />
-                <span className=" ">Visible To Selected Owners</span>
+                <label htmlFor="visibleToSelectedOwners" className=" ">
+                  Visible To Selected Owners
+                </label>
               </div>
               <div className=" flex items-center gap-1">
                 <input
-                  id="clientOwnership"
+                  id="visibleToAll"
                   type="radio"
                   name="clientOwnership"
-                  className="radio w-4 h-4"
                   value={"visible to all"}
+                  onChange={handleChange}
+                  className="radio w-4 h-4"
+                  defaultChecked={values.clientOwnership === "visible to all"}
                 />
-                <span className=" ">Visible To All</span>
+                <label htmlFor="visibleToAll" className=" ">
+                  Visible To All
+                </label>
               </div>
             </div>
           </div>
-          <small className="flex justify-center mt-1">{}</small>
+          <small className="flex justify-center mt-1 text-orange-600">
+            {touched.clientOwnership && errors.clientOwnership
+              ? errors.clientOwnership
+              : null}
+          </small>
         </div>
       </form>
-
-      {console.log(values)}
     </article>
   );
 };

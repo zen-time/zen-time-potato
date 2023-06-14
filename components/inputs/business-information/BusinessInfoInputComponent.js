@@ -3,12 +3,11 @@
 import Select from "react-select";
 import { useFormik } from "formik";
 import { schemaForBussinessInfo } from "@schemas";
-
-const onSubmit = () => {
-  console.log("submitted");
-};
+import { CgArrowLongRight } from "react-icons/cg";
+import { useState } from "react";
 
 const BussinessInfoInputComponent = () => {
+  const [dataInfo, setDataInfo] = useState([]);
   //select element options
   const jobTerminationNoticeOptions = [
     { value: "aaa", label: "aaa" },
@@ -66,24 +65,23 @@ const BussinessInfoInputComponent = () => {
       clientCategory: "",
       clientOwnership: "",
     },
+    onSubmit: (value) => {
+      setDataInfo((prev) => [...prev, value]);
+      const data = localStorage.setItem(
+        "bussinessInfoDetails",
+        JSON.stringify(dataInfo)
+      );
+    },
     validationSchema: schemaForBussinessInfo,
-    onSubmit,
   });
 
-  const {
-    values,
-    handleBlur,
-    handleSubmit,
-    handleChange,
-    errors,
-    touched,
-    dirty,
-  } = formik;
+  const { values, handleBlur, handleSubmit, handleChange, errors, touched } =
+    formik;
 
   return (
     <article className="px-8 py-6">
       <h2 className="text-2xl font-semibold mb-2 pb-2">Business Information</h2>
-      <form className="grid grid-cols-2 gap-11" onSubmit={() => handleSubmit}>
+      <form className="grid grid-cols-2 gap-8" onSubmit={handleSubmit}>
         <div className="flex flex-col">
           <div className="join">
             <label
@@ -346,7 +344,7 @@ const BussinessInfoInputComponent = () => {
             {touched.netTerms && errors.netTerms ? errors.netTerms : null}
           </small>
         </div>
-        <div className="flex flex-col">
+        {/* <div className="flex flex-col">
           <div className="join flex items-center">
             <label
               htmlFor="jobTerminationNotice"
@@ -373,7 +371,7 @@ const BussinessInfoInputComponent = () => {
             />
           </div>
           <small className="flex justify-center mt-1 text-orange-600">{}</small>
-        </div>
+        </div> */}
         <div className="flex flex-col">
           <div className="join">
             <label
@@ -401,7 +399,7 @@ const BussinessInfoInputComponent = () => {
             {touched.fax && errors.fax ? errors.fax : null}
           </small>
         </div>
-        <div className="flex flex-col">
+        {/* <div className="flex flex-col">
           <div className="join flex items-center">
             <label
               htmlFor="clientStatus"
@@ -452,8 +450,8 @@ const BussinessInfoInputComponent = () => {
             />
           </div>
           <small className="flex justify-center mt-1 text-orange-600">{}</small>
-        </div>
-        <div className="flex flex-col">
+        </div> */}
+        {/* <div className="flex flex-col">
           <div className="join flex items-center gap-4">
             <label
               htmlFor="clientOwnership"
@@ -503,8 +501,19 @@ const BussinessInfoInputComponent = () => {
               ? errors.clientOwnership
               : null}
           </small>
+        </div> */}
+        <div className="col-span-2 flex justify-end mt-4 ">
+          <button
+            type="submit"
+            className="btn btn-square btn-success btn-outline text-center w-full max-w-xs"
+            onClick={handleSubmit}
+          >
+            Complete
+            <CgArrowLongRight />
+          </button>
         </div>
       </form>
+      {console.log(dataInfo)}
     </article>
   );
 };

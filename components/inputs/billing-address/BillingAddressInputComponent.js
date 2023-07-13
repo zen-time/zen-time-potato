@@ -3,10 +3,12 @@
 import { useState } from "react";
 import Select from "react-select";
 import { useFormik } from "formik";
+import { CgArrowLongRight } from "react-icons/cg";
 
 import { schemaForBillingInfo } from "@schemas";
 
 const BillingAddressInputComponent = () => {
+  const [dataInfo, setDataInfo] = useState([]);
   const [netTerms, setNetTerms] = useState("");
   const [commissionType, setCommissionType] = useState("");
   const handleNetTerms = (selectedNetTerms) => {
@@ -50,7 +52,13 @@ const BillingAddressInputComponent = () => {
   });
 
   //formik hook
-
+  const handleOnSubmit = (value) => {
+    const datas = [...dataInfo];
+    localStorage.setItem("bussinessInfoDetails", JSON.stringify(datas));
+    setDataInfo((prev) => [...prev, value]);
+    console.log(formik.values);
+    console.log(dataInfo);
+  };
   const formik = useFormik({
     initialValues: {
       netTerms: "",
@@ -67,12 +75,13 @@ const BillingAddressInputComponent = () => {
       billAddress2Country: "",
     },
     validationSchema: schemaForBillingInfo,
+    onSubmit: handleOnSubmit,
   });
 
   const { values, handleBlur, handleSubmit, handleChange, errors, touched } =
     formik;
   return (
-    <article className="px-8 py-4">
+    <form className="px-8 py-4" onSubmit={handleSubmit}>
       <section>
         <h2 className="text-2xl font-semibold mb-6 pb-2 ">
           Placement-Full Time
@@ -89,7 +98,7 @@ const BillingAddressInputComponent = () => {
               <Select
                 id="netTerms"
                 name="netTerms"
-                value={netTerms}
+                value={(values.netTerms = netTerms)}
                 onChange={(selectedOption) => {
                   handleNetTerms(selectedOption);
                   console.log("values", values.netTerms);
@@ -111,27 +120,38 @@ const BillingAddressInputComponent = () => {
               {touched.netTerms && errors.netTerms ? errors.netTerms : null}
             </small>
           </div>
-          <div className="join join-vertical btn w-full max-w-xl">
-            <span className="join-item">Commission Type</span>
-            <Select
-              id="commissionType"
-              value={commissionType}
-              name="commissionType"
-              onChange={(selectedOption) => {
-                handleCommissionType(selectedOption);
-                console.log("values", values.commissionType);
-                // handleChange();
-              }}
-              // onChange={handleChange}
-              onBlur={handleBlur}
-              options={commissionTypeOptions}
-              placeholder={"commission type"}
-              loadingMessage={() => "Fetching Net Terms"}
-              noOptionsMessage={() => "Searching commission-Type not here"}
-              isSearchable={true}
-              styles={customStyles}
-              theme={theme}
-            />
+          <div className="flex flex-col">
+            <div
+              className={`${
+                touched.netTerms && errors.netTerms && "btn-error"
+              } join join-vertical btn w-full max-w-xl`}
+            >
+              <span className="join-item">Commission Type</span>
+              <Select
+                id="commissionType"
+                value={(values.commissionType = commissionType)}
+                name="commissionType"
+                onChange={(selectedOption) => {
+                  handleCommissionType(selectedOption);
+                  console.log("values", values.commissionType);
+                  // handleChange();
+                }}
+                // onChange={handleChange}
+                onBlur={handleBlur}
+                options={commissionTypeOptions}
+                placeholder={"commission type"}
+                loadingMessage={() => "Fetching Net Terms"}
+                noOptionsMessage={() => "Searching commission-Type not here"}
+                isSearchable={true}
+                styles={customStyles}
+                theme={theme}
+              />
+            </div>
+            <small className="flex justify-center mt-1 text-orange-600">
+              {touched.commissionType && errors.commissionType
+                ? errors.commissionType
+                : null}
+            </small>
           </div>
         </div>
       </section>
@@ -485,7 +505,16 @@ const BillingAddressInputComponent = () => {
           </div>
         </div>
       </section>
-    </article>
+      <div className="col-span-2 flex justify-end mt-4 ">
+        <button
+          type="submit"
+          className="btn btn-square btn-success btn-outline text-center w-full max-w-xs"
+        >
+          Complete
+          <CgArrowLongRight />
+        </button>
+      </div>
+    </form>
   );
 };
 

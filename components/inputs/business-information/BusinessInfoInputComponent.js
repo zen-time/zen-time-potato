@@ -8,6 +8,21 @@ import { useState } from "react";
 
 const BussinessInfoInputComponent = () => {
   const [dataInfo, setDataInfo] = useState([]);
+  const [jobTerminationNotice, setJobTerminationNotice] = useState("");
+  const [clientStatus, setClientStatus] = useState("");
+  const [clientCategory, setClientCategory] = useState("");
+
+  const handleJobTerminationNotice = (selectedjobTerminationNotice) => {
+    console.log(selectedjobTerminationNotice);
+    setJobTerminationNotice(selectedjobTerminationNotice);
+  };
+  const handleClientStatus = (selectedClientStatus) => {
+    console.log(selectedClientStatus);
+    setClientStatus(selectedClientStatus);
+  };
+  const handleClientCategory = (selectedClientCategory) => {
+    setClientCategory(selectedClientCategory);
+  };
   //select element options
   const jobTerminationNoticeOptions = [
     { value: "aaa", label: "aaa" },
@@ -47,7 +62,12 @@ const BussinessInfoInputComponent = () => {
   });
 
   //hook
-
+  const handleOnSubmit = (value) => {
+    const datas = [...dataInfo];
+    localStorage.setItem("bussinessInfoDetails", JSON.stringify(datas));
+    setDataInfo((prev) => [...prev, value]);
+    console.log(formik.values);
+  };
   const formik = useFormik({
     initialValues: {
       companyName: "",
@@ -65,13 +85,7 @@ const BussinessInfoInputComponent = () => {
       clientCategory: "",
       clientOwnership: "",
     },
-    onSubmit: (value) => {
-      setDataInfo((prev) => [...prev, value]);
-      const data = localStorage.setItem(
-        "bussinessInfoDetails",
-        JSON.stringify(dataInfo)
-      );
-    },
+    onSubmit: handleOnSubmit,
     validationSchema: schemaForBussinessInfo,
   });
 
@@ -344,7 +358,7 @@ const BussinessInfoInputComponent = () => {
             {touched.netTerms && errors.netTerms ? errors.netTerms : null}
           </small>
         </div>
-        {/* <div className="flex flex-col">
+        <div className="flex flex-col">
           <div className="join flex items-center">
             <label
               htmlFor="jobTerminationNotice"
@@ -362,16 +376,24 @@ const BussinessInfoInputComponent = () => {
               className="join-item w-full max-w-xs "
               options={jobTerminationNoticeOptions}
               placeholder="Job Termination Notice"
-              value={values.jobTerminationNotice}
-              onChange={handleChange}
+              value={(values.jobTerminationNotice = jobTerminationNotice)}
+              onChange={(selectedOption) => {
+                handleJobTerminationNotice(selectedOption);
+                console.log("values", values.JobTerminationNotice);
+                // handleChange();
+              }}
               onBlur={handleBlur}
               isSearchable={true}
               styles={customStyles}
               theme={theme}
             />
           </div>
-          <small className="flex justify-center mt-1 text-orange-600">{}</small>
-        </div> */}
+          <small className="flex justify-center mt-1 text-orange-600">
+            {touched.jobTerminationNotice && errors.jobTerminationNotice
+              ? errors.jobTerminationNotice
+              : null}
+          </small>
+        </div>
         <div className="flex flex-col">
           <div className="join">
             <label
@@ -399,7 +421,7 @@ const BussinessInfoInputComponent = () => {
             {touched.fax && errors.fax ? errors.fax : null}
           </small>
         </div>
-        {/* <div className="flex flex-col">
+        <div className="flex flex-col">
           <div className="join flex items-center">
             <label
               htmlFor="clientStatus"
@@ -416,14 +438,22 @@ const BussinessInfoInputComponent = () => {
               options={clientStatusOptions}
               placeholder={"Client Status"}
               isSearchable={true}
-              value={values.clientStatus}
-              onChange={handleChange}
+              value={(values.clientStatus = clientStatus)}
+              onChange={(selectedOption) => {
+                handleClientStatus(selectedOption);
+                console.log("values", values.ClientStatus);
+                // handleChange();
+              }}
               onBlur={handleBlur}
               styles={customStyles}
               theme={theme}
             />
           </div>
-          <small className="flex justify-center mt-1 text-orange-600">{}</small>
+          <small className="flex justify-center mt-1 text-orange-600">
+            {touched.clientStatus && errors.clientStatus
+              ? errors.clientStatus
+              : null}
+          </small>
         </div>
         <div className="flex flex-col">
           <div className="join flex items-center">
@@ -438,20 +468,27 @@ const BussinessInfoInputComponent = () => {
 
             <Select
               id="clientCategory"
-              className="join-item w-full max-w-xs"
+              className=" join-item w-full max-w-xs"
               options={clientCategoryOptions}
               placeholder={"Client Category"}
               isSearchable={true}
-              value={values.clientCategory}
-              onChange={handleChange}
+              value={(values.clientCategory = clientCategory)}
+              onChange={(selectedOption) => {
+                handleClientCategory(selectedOption);
+                // setClientCategory(selectedOption.value);
+              }}
               onBlur={handleBlur}
               styles={customStyles}
               theme={theme}
             />
           </div>
-          <small className="flex justify-center mt-1 text-orange-600">{}</small>
-        </div> */}
-        {/* <div className="flex flex-col">
+          <small className="flex justify-center mt-1 text-orange-600">
+            {touched.clientCategory && errors.clientCategory
+              ? errors.clientCategory
+              : null}
+          </small>
+        </div>
+        <div className="flex flex-col">
           <div className="join flex items-center gap-4">
             <label
               htmlFor="clientOwnership"
@@ -501,12 +538,11 @@ const BussinessInfoInputComponent = () => {
               ? errors.clientOwnership
               : null}
           </small>
-        </div> */}
+        </div>
         <div className="col-span-2 flex justify-end mt-4 ">
           <button
             type="submit"
             className="btn btn-square btn-success btn-outline text-center w-full max-w-xs"
-            onClick={handleSubmit}
           >
             Complete
             <CgArrowLongRight />
